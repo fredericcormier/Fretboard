@@ -10,7 +10,7 @@ Chords, Scales and Fingerings for string instruments in Elm
 <center>
 
 
-```
+
 #LICENSE
 ----
 Copyright (C) 2017 Frederic Cormier
