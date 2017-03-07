@@ -1,4 +1,3 @@
 # Fretboard
-Fretboard in elm
 
-Practice your scales and know your chords with this app written in elm
+Chords, Scales and Fingerings for string instruments in Elm
