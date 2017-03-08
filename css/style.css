@@ -3,6 +3,14 @@ body {
   color: #666;
   margin: 0 0 50px; }
 
+a:link, a:visited, a:active {
+  font-weight: bold;
+  color: #658080;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
 /*Matrix*/
 div.centered-wrapper {
   text-align: center;

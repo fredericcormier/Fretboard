@@ -3,13 +3,25 @@ $bgColor: #ffffff;
 $GREYBLUE: #A9B7C0;
 $MINTY: #C7D8C6;
 $LIGHT: #EFD9C1;
-$POWDER: #CCCBC6; 
+$POWDER: #CCCBC6;
 $selectedCellColor: #658080;
 
 body {
     line-height: 1.5;
     color: $devilColor;
     margin: 0 0 50px;
+}
+
+a:link , a:visited, a:active{
+    font-weight: bold;
+    color: $selectedCellColor;
+    text-decoration: none;
+}
+
+
+a:hover {
+    text-decoration: underline;
+
 }
 /*Matrix*/
 div.centered-wrapper {
