@@ -9,9 +9,9 @@ Chords, Scales and Fingerings for string instruments in Elm
 
 ![screenshot](http://www.i-mo.eu/zings/fingerboardapp.png)
 
-##Compile:
+###Compile:
 `elm-make ./elm/Main.elm  --output=./js/Main.js`
-
+___
 
 #LICENSE
 ----
