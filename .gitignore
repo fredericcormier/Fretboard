@@ -1,7 +1,8 @@
 # elm-package generated files
-elm-stuff/build-artifacts
+elm-stuff
 # elm-repl generated files
 repl-temp-*
 config.codekit3
 config.codekit
 README.html
+js
