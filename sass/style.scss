@@ -25,6 +25,7 @@ a:hover {
 }
 /*Matrix*/
 div.centered-wrapper {
+
     text-align: center;
     background-color: $bgColor;
     width: 960px;
@@ -125,17 +126,18 @@ div.select-cell {
     min-width: 850px;
     background-color: white;
     border-top: #eee solid 1px;
+    text-align: center;
     font-size: 13px;
     text-align: center;
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 50px;
+    height: 10px;
     width: 100%;
+    padding-bottom: 30px;
 }
 
 .footerContent {
-    width: auto;
-    text-align: center;
-    margin-top: 15px;
+    width: 960px;
+    margin: 15px auto 10px auto;
 }
