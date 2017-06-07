@@ -109,3 +109,10 @@ div.select-cell {
 .footerContent {
   width: 960px;
   margin: 15px auto 10px auto; }
+
+#audio-banner {
+  max-width: 860px;
+  margin: auto;
+  padding-top: 10px; }
+  #audio-banner button {
+    background-color: white; }

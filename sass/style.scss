@@ -141,3 +141,14 @@ div.select-cell {
     width: 960px;
     margin: 15px auto 10px auto;
 }
+
+#audio-banner{
+    max-width: 860px;
+    margin: auto;
+    // background-color: $selectedCellColor;
+    padding-top: 10px;
+    button{
+        // float: left;
+        background-color: white;
+    }
+}

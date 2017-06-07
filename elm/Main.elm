@@ -1,4 +1,4 @@
-module Main exposing (..)
+port module Main exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
@@ -8,12 +8,22 @@ import Tuning exposing (..)
 import Fretboard exposing (..)
 
 
-main : Program Never Model Msg
+-- main : Program Never Model Msg
+-- main =
+--     Html.beginnerProgram
+--         { model = model
+--         , view = view
+--         , update = update
+--         }
+
+
+main : Program (Maybe String) Model Msg
 main =
-    Html.beginnerProgram
-        { model = model
+    Html.programWithFlags
+        { init = init
         , view = view
         , update = update
+        , subscriptions = \_ -> Sub.none
         }
 
 
@@ -28,18 +38,31 @@ type alias Model =
     , formulaName : FormulaName
     , tuning : TuningName
     , range : OctaveRange
+    , audioPlaying : Bool
+    , arpeggioPatterns : String
+    , bpm : Int
     }
 
 
-model : Model
-model =
-    { mode = scaleMode
-    , note = "C"
-    , octave = 2
-    , formulaName = ionian
-    , tuning = "Guitar"
-    , range = 3
-    }
+init : Maybe String -> ( Model, Cmd Msg )
+init s =
+    ( { mode = scaleMode
+      , note = "C"
+      , octave = 2
+      , formulaName = "Ionian/Major"
+      , tuning = "Guitar"
+      , range = 3
+      , audioPlaying = False
+      , arpeggioPatterns = "Up"
+      , bpm = 110
+      }
+    , Cmd.none
+    )
+
+
+subscriptions : Model -> Sub Msg
+subscriptions model =
+    Sub.none
 
 
 
@@ -50,49 +73,65 @@ type Msg
     = MatrixChanged String String
     | TuningChanged String
     | OctaveRangeChanged String
+    | ToggleAudio
+    | ArpeggioPatternChanged String
+    | BPMChanged String
 
 
-update : Msg -> Model -> Model
+update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         MatrixChanged m v ->
             case m of
                 "Formula" ->
-                    { model | formulaName = v }
+                    ( { model | formulaName = v }, Cmd.none )
 
                 "Note" ->
-                    { model | note = v }
+                    ( { model | note = v }, Cmd.none )
 
                 "Octave" ->
-                    { model | octave = Result.withDefault 0 (String.toInt v) }
+                    ( { model | octave = Result.withDefault 0 (String.toInt v) }, Cmd.none )
 
                 "Mode" ->
                     case v of
                         "Scale" ->
-                            { model
+                            ( { model
                                 | mode = v
                                 , formulaName =
                                     ionian
-                            }
+                              }
+                            , Cmd.none
+                            )
 
                         "Chord" ->
-                            { model
+                            ( { model
                                 | mode = v
                                 , formulaName =
                                     major
-                            }
+                              }
+                            , Cmd.none
+                            )
 
                         _ ->
-                            model
+                            ( model, Cmd.none )
 
                 _ ->
-                    model
+                    ( model, Cmd.none )
 
         TuningChanged t ->
-            { model | tuning = t }
+            ( { model | tuning = t }, Cmd.none )
 
         OctaveRangeChanged r ->
-            { model | range = Result.withDefault 1 (String.toInt r) }
+            ( { model | range = Result.withDefault 1 (String.toInt r) }, Cmd.none )
+
+        ToggleAudio ->
+            ( model, Cmd.none )
+
+        ArpeggioPatternChanged p ->
+            ( { model | arpeggioPatterns = p }, Cmd.none )
+
+        BPMChanged newBpm ->
+            ( { model | bpm = Result.withDefault 110 (String.toInt newBpm) }, Cmd.none )
 
 
 
@@ -109,7 +148,7 @@ intToOption : Int -> Html Msg
 intToOption i =
     option
         [ value (toString i)
-        , selected (i == model.range)
+          -- , selected (i == model.range)
         ]
         [ text (toString i) ]
 
@@ -276,7 +315,7 @@ instrumentSelect : Model -> Html Msg
 instrumentSelect model =
     div [ class "select-cell" ]
         [ select [ onInput TuningChanged, name "Intrument", class "soflow" ]
-            (names |> List.map stringToOption)
+            (tuningNames |> List.map stringToOption)
         ]
 
 
@@ -315,6 +354,30 @@ fretboardDiv model =
             ]
 
 
+arpeggioPatterns : List String
+arpeggioPatterns =
+    [ "Up"
+    , "Down"
+    , "Up And Down"
+    , "The Back Thing"
+    , "The Spider Thing"
+    , "Random"
+    ]
+
+
+audioBannerDiv : Model -> Html Msg
+audioBannerDiv model =
+    div
+        [ id "audio-banner"
+        ]
+        [ button [ onClick ToggleAudio ] [ text "Play" ]
+        , select [ onInput ArpeggioPatternChanged, name "Pattern", class "soflow" ]
+            (arpeggioPatterns |> List.map stringToOption)
+        , input [ onInput BPMChanged, type_ "range", Html.Attributes.min "10", Html.Attributes.max "200" ] []
+        , span [ id "bpm" ] [ text (model.bpm |> toString) ]
+        ]
+
+
 view : Model -> Html Msg
 view model =
     div
@@ -326,5 +389,6 @@ view model =
         , formulaMatrixDiv model
         , resultMatrixDiv model
         , selectDiv model
+        , audioBannerDiv model
         , fretboardDiv model
         ]

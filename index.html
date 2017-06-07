@@ -55,12 +55,14 @@
 
     <!-- End Document
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script src="lib/Tone.min.js"></script>
+    <script src="lib/tone.min.js/"></script>
+    <script src="lib/logger.min.js"></script>
+    <script src="lib/fbaudio.js"></script>
     <script src="js/Main.js"></script>
 
     <script>
         var node = document.getElementById('elm-app')
-        Elm.Main.embed(node);
+        Elm.Main.embed(node, "nevermind");
     </script>
 </body>
 

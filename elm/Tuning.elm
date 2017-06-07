@@ -5,7 +5,7 @@ module Tuning
         , TuningName
         , tuningPool
         , strings
-        , names
+        , tuningNames
         , gauges
         )
 
@@ -55,8 +55,8 @@ type alias Gauge =
 -- returns all the tuning names in the pool
 
 
-names : List TuningName
-names =
+tuningNames : List TuningName
+tuningNames =
     tuningPool
         |> List.map (\( n, t, g ) -> n)
 
