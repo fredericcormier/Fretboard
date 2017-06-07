@@ -6,3 +6,4 @@ config.codekit3
 config.codekit
 README.html
 js
+.sass-cache
