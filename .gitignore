@@ -2,8 +2,8 @@
 elm-stuff
 # elm-repl generated files
 repl-temp-*
-config.codekit3
-config.codekit
+# config.codekit3
+# config.codekit
 README.html
 js
 .sass-cache
