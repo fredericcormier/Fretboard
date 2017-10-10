@@ -1,10 +1,6 @@
 module Fingering exposing (..)
 
-import Notes
-    exposing
-        ( NoteCollection
-        , noteAndOctaveToMidiNoteNumber
-        )
+import WesternMusicData exposing (NoteCollection)
 
 
 {- Takes a List of open Strings as MIDI NOte Number.

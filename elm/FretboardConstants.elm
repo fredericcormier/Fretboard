@@ -175,9 +175,14 @@ fbFingeringFillColorRootNote =
 
 fbFingeringCircleStrokeColorRootNote : String
 fbFingeringCircleStrokeColorRootNote =
-    "#aaa"
+    "#fff"
 
 
 fbFingeringTextColorRootNote : String
 fbFingeringTextColorRootNote =
-    "#666"
+    "#fff"
+
+
+fbRootFingerGreenColor : String
+fbRootFingerGreenColor =
+    "#658080"

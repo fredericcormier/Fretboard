@@ -100,8 +100,9 @@ div.cell.result{
 
 /*End Matrix*/
 .select-wrapper {
-    width: 55%;
+    width:85%;
     margin: 0 auto;
+
 }
 
 select {
@@ -119,6 +120,13 @@ div.select-row {
 
 div.select-cell {
     float: left;
+    margin-top: 20px;
+}
+
+
+div.select-cell-caption {
+    float: left;
+    padding-top: 1px;
     margin-top: 20px;
 }
 

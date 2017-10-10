@@ -1,20 +1,12 @@
 port module Main exposing (..)
 
+import WesternMusicData exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick, onInput)
 import Notes exposing (..)
 import Tuning exposing (..)
 import Fretboard exposing (..)
-
-
--- main : Program Never Model Msg
--- main =
---     Html.beginnerProgram
---         { model = model
---         , view = view
---         , update = update
---         }
 
 
 main : Program (Maybe String) Model Msg
@@ -27,8 +19,31 @@ main =
         }
 
 
+port audioStart : String -> Cmd msg
+
+
+port audioStop : String -> Cmd msg
+
+
+port bpmChanged : String -> Cmd msg
+
+
+port notesChanged : List String -> Cmd msg
+
+
 
 -- MODEL
+
+
+arpeggioPatterns : List String
+arpeggioPatterns =
+    [ "Up"
+    , "Down"
+    , "Up And Down"
+    , "The Back Thing"
+    , "The Spider Thing"
+    , "Random"
+    ]
 
 
 type alias Model =
@@ -41,23 +56,29 @@ type alias Model =
     , audioPlaying : Bool
     , arpeggioPatterns : String
     , bpm : Int
+    , rootNoteDouble : Bool
     }
 
 
 init : Maybe String -> ( Model, Cmd Msg )
 init s =
-    ( { mode = scaleMode
-      , note = "C"
-      , octave = 2
-      , formulaName = "Ionian/Major"
-      , tuning = "Guitar"
-      , range = 3
-      , audioPlaying = False
-      , arpeggioPatterns = "Up"
-      , bpm = 110
-      }
-    , Cmd.none
-    )
+    let
+        initialModel =
+            { mode = scaleMode
+            , note = "C"
+            , octave = 2
+            , formulaName = "Ionian/Major"
+            , tuning = "Guitar"
+            , range = 3
+            , audioPlaying = False
+            , arpeggioPatterns = "Up"
+            , bpm = 120
+            , rootNoteDouble = True
+            }
+    in
+        ( initialModel
+        , notesChanged (notesForAudio initialModel)
+        )
 
 
 subscriptions : Model -> Sub Msg
@@ -76,6 +97,20 @@ type Msg
     | ToggleAudio
     | ArpeggioPatternChanged String
     | BPMChanged String
+    | DoubleRootChanged String
+
+
+doubleRootChoices : List String
+doubleRootChoices =
+    [ "Yes"
+    , "No"
+    ]
+
+
+
+{--We need to pass the updated model to both the model variable
+    and the Cmd Msg to keep the views and the audio in sync
+--}
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -84,59 +119,131 @@ update msg model =
         MatrixChanged m v ->
             case m of
                 "Formula" ->
-                    ( { model | formulaName = v }, Cmd.none )
+                    let
+                        newModel =
+                            { model | formulaName = v }
+                    in
+                        ( newModel
+                        , notesChanged (notesForAudio newModel)
+                        )
 
                 "Note" ->
-                    ( { model | note = v }, Cmd.none )
+                    let
+                        newModel =
+                            { model | note = v }
+                    in
+                        ( newModel
+                        , notesChanged (notesForAudio newModel)
+                        )
 
                 "Octave" ->
-                    ( { model | octave = Result.withDefault 0 (String.toInt v) }, Cmd.none )
+                    let
+                        newModel =
+                            { model | octave = Result.withDefault 0 (String.toInt v) }
+                    in
+                        ( newModel
+                        , notesChanged (notesForAudio newModel)
+                        )
 
                 "Mode" ->
                     case v of
                         "Scale" ->
-                            ( { model
-                                | mode = v
-                                , formulaName =
-                                    ionian
-                              }
-                            , Cmd.none
-                            )
+                            let
+                                newModel =
+                                    { model | mode = v, formulaName = ionian }
+                            in
+                                ( newModel
+                                , notesChanged (notesForAudio newModel)
+                                )
 
                         "Chord" ->
-                            ( { model
-                                | mode = v
-                                , formulaName =
-                                    major
-                              }
-                            , Cmd.none
-                            )
+                            let
+                                newModel =
+                                    { model | mode = v, formulaName = major }
+                            in
+                                ( newModel
+                                , notesChanged (notesForAudio newModel)
+                                )
 
                         _ ->
-                            ( model, Cmd.none )
+                            ( model, notesChanged (notesForAudio model) )
 
                 _ ->
-                    ( model, Cmd.none )
+                    ( model, notesChanged (notesForAudio model) )
 
         TuningChanged t ->
             ( { model | tuning = t }, Cmd.none )
 
         OctaveRangeChanged r ->
-            ( { model | range = Result.withDefault 1 (String.toInt r) }, Cmd.none )
+            let
+                newModel =
+                    { model | range = Result.withDefault 1 (String.toInt r) }
+            in
+                ( newModel
+                , notesChanged (notesForAudio newModel)
+                )
 
         ToggleAudio ->
-            ( model, Cmd.none )
+            case model.audioPlaying of
+                True ->
+                    ( { model | audioPlaying = False }
+                    , audioStop "nevermind"
+                    )
+
+                False ->
+                    ( { model | audioPlaying = True }
+                    , audioStart "nevermind"
+                    )
 
         ArpeggioPatternChanged p ->
-            ( { model | arpeggioPatterns = p }, Cmd.none )
+            let
+                newModel =
+                    { model | arpeggioPatterns = p }
+            in
+                ( newModel
+                , notesChanged (notesForAudio newModel)
+                )
 
         BPMChanged newBpm ->
-            ( { model | bpm = Result.withDefault 110 (String.toInt newBpm) }, Cmd.none )
+            ( { model | bpm = Result.withDefault 110 (String.toInt newBpm) }
+            , bpmChanged (model.bpm |> toString)
+            )
+
+        DoubleRootChanged dr ->
+            let
+                newModel =
+                    { model | rootNoteDouble = choiceToBool dr }
+            in
+                ( newModel
+                , notesChanged (notesForAudio newModel)
+                )
 
 
 
 -- Html Select Helpers
--- put any select option here
+
+
+choiceToBool : String -> Bool
+choiceToBool s =
+    case s of
+        "Yes" ->
+            True
+
+        "No" ->
+            False
+
+        _ ->
+            False
+
+
+boolToChoice : Bool -> String
+boolToChoice b =
+    case b of
+        True ->
+            "Yes"
+
+        False ->
+            "No"
 
 
 stringToOption : String -> Html Msg
@@ -144,13 +251,22 @@ stringToOption v =
     option [ value v ] [ text v ]
 
 
-intToOption : Int -> Html Msg
-intToOption i =
+intToOption : OctaveRange -> Int -> Html Msg
+intToOption range i =
     option
         [ value (toString i)
-          -- , selected (i == model.range)
+        , selected (i == range)
         ]
         [ text (toString i) ]
+
+
+boolToOption : Bool -> String -> Html Msg
+boolToOption dedup choice =
+    option
+        [ value (choice)
+        , selected (choice == (boolToChoice dedup))
+        ]
+        [ text choice ]
 
 
 
@@ -252,63 +368,75 @@ formulaMatrixDiv model =
             (matrixOfStrings "Formula" (formulaNames scaleFormulaPool) model.formulaName)
 
 
+notesForAudio : Model -> List String
+notesForAudio model =
+    let
+        notes =
+            notesForModelState model
+    in
+        case model.arpeggioPatterns of
+            "Up" ->
+                notes
+
+            "Down" ->
+                List.reverse notes
+
+            "Up And Down" ->
+                -- List.reverse notes |> List.append notes
+                notes ++ List.reverse notes
+
+            _ ->
+                notes
+
+
+
+{-
+   retun the note collection according to the model state
+-}
+
+
+notesForModelState : Model -> List String
+notesForModelState model =
+    if model.mode == chordMode then
+        ((chord model.note
+            model.octave
+            model.formulaName
+            model.range
+            (not (model.rootNoteDouble))
+            0
+         )
+            |> List.take 36
+            |> List.map (\i -> midiNoteNumberToString (i))
+        )
+    else
+        ((scale model.note
+            model.octave
+            model.formulaName
+            model.range
+            (not (model.rootNoteDouble))
+         )
+            |> List.take 36
+            |> List.map (\i -> midiNoteNumberToString (i))
+        )
+
+
 resultMatrixDiv : Model -> Html Msg
 resultMatrixDiv model =
     let
         selectedCellNONE =
             ""
     in
-        if model.mode == chordMode then
-            div
-                [ classList
-                    [ ( "matrix", True )
-                    , ( "result", True )
-                    , ( "inline-block", True )
-                    ]
+        div
+            [ classList
+                [ ( "matrix", True )
+                , ( "result", True )
+                , ( "inline-block", True )
                 ]
-                (matrixOfStrings "Result"
-                    ((chord model.note
-                        model.octave
-                        model.formulaName
-                        model.range
-                        0
-                     )
-                        |> List.take 20
-                        |> List.map (\i -> midiNoteNumberToString (i))
-                    )
-                    selectedCellNONE
-                )
-        else
-            div
-                [ classList
-                    [ ( "matrix", True )
-                    , ( "result", True )
-                    , ( "inline-block", True )
-                    ]
-                ]
-                (matrixOfStrings "Result"
-                    ((scale model.note
-                        model.octave
-                        model.formulaName
-                        model.range
-                     )
-                        |> List.take 20
-                        |> List.map (\i -> midiNoteNumberToString (i))
-                    )
-                    selectedCellNONE
-                )
-
-
-selectDiv : Model -> Html Msg
-selectDiv model =
-    div [ class "select-wrapper" ]
-        [ div [ class "select-row" ]
-            [ div [ class "select-cell" ] [ text "Tuning :" ]
-            , instrumentSelect model
-            , div [ class "select-cell" ] [ text "Octave Range :" ]
-            , octaveRangeSelect model
             ]
-        ]
+            (matrixOfStrings "Result"
+                (notesForModelState model)
+                selectedCellNONE
+            )
 
 
 instrumentSelect : Model -> Html Msg
@@ -323,7 +451,54 @@ octaveRangeSelect : Model -> Html Msg
 octaveRangeSelect model =
     div [ class "select-cell" ]
         [ select [ onInput OctaveRangeChanged, name "Range", class "soflow" ]
-            ((List.range 1 6) |> List.map intToOption)
+            -- pass the model range as first argument so the menu can display '3' on start up
+            ((List.range 1 6) |> List.map (intToOption model.range))
+        ]
+
+
+arpeggioPatternsSelect : Model -> Html Msg
+arpeggioPatternsSelect model =
+    div [ class "select-cell" ]
+        [ select [ onInput ArpeggioPatternChanged, name "Pattern", class "soflow" ]
+            (arpeggioPatterns |> List.map stringToOption)
+        ]
+
+
+doubleRootSelect : Model -> Html Msg
+doubleRootSelect model =
+    div [ class "select-cell" ]
+        [ select [ onInput DoubleRootChanged, name "DoubleRoot", class "soflow" ]
+            (doubleRootChoices |> List.map (boolToOption model.rootNoteDouble))
+        ]
+
+
+fretboardSelectionDiv : Model -> Html Msg
+fretboardSelectionDiv model =
+    div [ class "select-wrapper" ]
+        [ div [ class "select-row" ]
+            [ div [ class "select-cell-caption" ] [ text "Tuning :" ]
+            , instrumentSelect model
+            , div [ class "select-cell-caption" ] [ text "Octave Range :" ]
+            , octaveRangeSelect model
+            , div [ class "select-cell-caption" ] [ text "Pattern :" ]
+            , arpeggioPatternsSelect model
+            , div [ class "select-cell-caption" ] [ text "Double Root :" ]
+            , doubleRootSelect model
+            ]
+        ]
+
+
+audioBannerDiv : Model -> Html Msg
+audioBannerDiv model =
+    div
+        [ id "audio-banner"
+        ]
+        [ if model.audioPlaying == False then
+            button [ onClick ToggleAudio ] [ text "Play" ]
+          else
+            button [ onClick ToggleAudio ] [ text "Stop" ]
+        , input [ onInput BPMChanged, id "bpm", type_ "range", Html.Attributes.min "10", Html.Attributes.max "200" ] []
+        , span [] [ text (model.bpm |> toString) ]
         ]
 
 
@@ -338,6 +513,7 @@ fretboardDiv model =
                     model.octave
                     model.formulaName
                     model.range
+                    model.rootNoteDouble
                 )
             ]
     else
@@ -349,33 +525,10 @@ fretboardDiv model =
                     model.octave
                     model.formulaName
                     model.range
+                    model.rootNoteDouble
                     0
                 )
             ]
-
-
-arpeggioPatterns : List String
-arpeggioPatterns =
-    [ "Up"
-    , "Down"
-    , "Up And Down"
-    , "The Back Thing"
-    , "The Spider Thing"
-    , "Random"
-    ]
-
-
-audioBannerDiv : Model -> Html Msg
-audioBannerDiv model =
-    div
-        [ id "audio-banner"
-        ]
-        [ button [ onClick ToggleAudio ] [ text "Play" ]
-        , select [ onInput ArpeggioPatternChanged, name "Pattern", class "soflow" ]
-            (arpeggioPatterns |> List.map stringToOption)
-        , input [ onInput BPMChanged, type_ "range", Html.Attributes.min "10", Html.Attributes.max "200" ] []
-        , span [ id "bpm" ] [ text (model.bpm |> toString) ]
-        ]
 
 
 view : Model -> Html Msg
@@ -388,7 +541,7 @@ view model =
         , octaveMatrixDiv model
         , formulaMatrixDiv model
         , resultMatrixDiv model
-        , selectDiv model
         , audioBannerDiv model
+        , fretboardSelectionDiv model
         , fretboardDiv model
         ]

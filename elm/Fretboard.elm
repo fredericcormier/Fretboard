@@ -3,10 +3,10 @@ module Fretboard exposing (render)
 import FretboardConstants exposing (..)
 import Notes
     exposing
-        ( NoteCollection
-        , midiNoteNumberToNoteAndOctave
+        ( midiNoteNumberToNoteAndOctave
         , noteAndOctaveToMidiNoteNumber
         )
+import WesternMusicData exposing (NoteCollection)
 import Tuning exposing (..)
 import Svg exposing (..)
 import Svg.Attributes exposing (..)
@@ -309,8 +309,8 @@ oneStringFingering stringNumber list board =
                                 i
                                 noteName
                                 fbFingeringFillColorRootNote
-                                fbFingeringCircleStrokeColorRootNote
-                                fbFingeringTextColorRootNote
+                                fbFingeringCircleStrokeColorNormal
+                                fbFingeringTextColorNormal
                                 ""
                                 board
                         else
