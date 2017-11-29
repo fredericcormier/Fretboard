@@ -1,12 +1,12 @@
 port module Main exposing (..)
 
-import WesternMusicData exposing (..)
+import Fretboard exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick, onInput)
 import Notes exposing (..)
 import Tuning exposing (..)
-import Fretboard exposing (..)
+import WesternMusicData exposing (..)
 
 
 main : Program (Maybe String) Model Msg
@@ -76,9 +76,9 @@ init s =
             , rootNoteDouble = True
             }
     in
-        ( initialModel
-        , notesChanged (notesForAudio initialModel)
-        )
+    ( initialModel
+    , notesChanged (notesForAudio initialModel)
+    )
 
 
 subscriptions : Model -> Sub Msg
@@ -123,27 +123,27 @@ update msg model =
                         newModel =
                             { model | formulaName = v }
                     in
-                        ( newModel
-                        , notesChanged (notesForAudio newModel)
-                        )
+                    ( newModel
+                    , notesChanged (notesForAudio newModel)
+                    )
 
                 "Note" ->
                     let
                         newModel =
                             { model | note = v }
                     in
-                        ( newModel
-                        , notesChanged (notesForAudio newModel)
-                        )
+                    ( newModel
+                    , notesChanged (notesForAudio newModel)
+                    )
 
                 "Octave" ->
                     let
                         newModel =
                             { model | octave = Result.withDefault 0 (String.toInt v) }
                     in
-                        ( newModel
-                        , notesChanged (notesForAudio newModel)
-                        )
+                    ( newModel
+                    , notesChanged (notesForAudio newModel)
+                    )
 
                 "Mode" ->
                     case v of
@@ -152,18 +152,18 @@ update msg model =
                                 newModel =
                                     { model | mode = v, formulaName = ionian }
                             in
-                                ( newModel
-                                , notesChanged (notesForAudio newModel)
-                                )
+                            ( newModel
+                            , notesChanged (notesForAudio newModel)
+                            )
 
                         "Chord" ->
                             let
                                 newModel =
                                     { model | mode = v, formulaName = major }
                             in
-                                ( newModel
-                                , notesChanged (notesForAudio newModel)
-                                )
+                            ( newModel
+                            , notesChanged (notesForAudio newModel)
+                            )
 
                         _ ->
                             ( model, notesChanged (notesForAudio model) )
@@ -179,9 +179,9 @@ update msg model =
                 newModel =
                     { model | range = Result.withDefault 1 (String.toInt r) }
             in
-                ( newModel
-                , notesChanged (notesForAudio newModel)
-                )
+            ( newModel
+            , notesChanged (notesForAudio newModel)
+            )
 
         ToggleAudio ->
             case model.audioPlaying of
@@ -200,13 +200,17 @@ update msg model =
                 newModel =
                     { model | arpeggioPatterns = p }
             in
-                ( newModel
-                , notesChanged (notesForAudio newModel)
-                )
+            ( newModel
+            , notesChanged (notesForAudio newModel)
+            )
 
         BPMChanged newBpm ->
-            ( { model | bpm = Result.withDefault 110 (String.toInt newBpm) }
-            , bpmChanged (model.bpm |> toString)
+            let
+                newModel =
+                    { model | bpm = Result.withDefault 110 (String.toInt newBpm) }
+            in
+            ( newModel
+            , bpmChanged (newModel.bpm |> toString)
             )
 
         DoubleRootChanged dr ->
@@ -214,9 +218,9 @@ update msg model =
                 newModel =
                     { model | rootNoteDouble = choiceToBool dr }
             in
-                ( newModel
-                , notesChanged (notesForAudio newModel)
-                )
+            ( newModel
+            , notesChanged (notesForAudio newModel)
+            )
 
 
 
@@ -263,8 +267,8 @@ intToOption range i =
 boolToOption : Bool -> String -> Html Msg
 boolToOption dedup choice =
     option
-        [ value (choice)
-        , selected (choice == (boolToChoice dedup))
+        [ value choice
+        , selected (choice == boolToChoice dedup)
         ]
         [ text choice ]
 
@@ -313,7 +317,7 @@ selectionH1 model =
         [ text <|
             model.note
                 ++ " "
-                ++ (toString model.octave)
+                ++ toString model.octave
                 ++ " - "
                 ++ model.formulaName
         ]
@@ -341,8 +345,8 @@ octaveMatrixDiv model =
             ]
         ]
         (matrixOfStrings "Octave"
-            (List.map (\i -> toString (i)) (List.range -1 9))
-            (toString (model.octave))
+            (List.map (\i -> toString i) (List.range -1 9))
+            (toString model.octave)
         )
 
 
@@ -374,19 +378,19 @@ notesForAudio model =
         notes =
             notesForModelState model
     in
-        case model.arpeggioPatterns of
-            "Up" ->
-                notes
+    case model.arpeggioPatterns of
+        "Up" ->
+            notes
 
-            "Down" ->
-                List.reverse notes
+        "Down" ->
+            List.reverse notes
 
-            "Up And Down" ->
-                -- List.reverse notes |> List.append notes
-                notes ++ List.reverse notes
+        "Up And Down" ->
+            -- List.reverse notes |> List.append notes
+            notes ++ List.reverse notes
 
-            _ ->
-                notes
+        _ ->
+            notes
 
 
 
@@ -398,26 +402,22 @@ notesForAudio model =
 notesForModelState : Model -> List String
 notesForModelState model =
     if model.mode == chordMode then
-        ((chord model.note
+        chord model.note
             model.octave
             model.formulaName
             model.range
-            (not (model.rootNoteDouble))
+            (not model.rootNoteDouble)
             0
-         )
             |> List.take 36
-            |> List.map (\i -> midiNoteNumberToString (i))
-        )
+            |> List.map (\i -> midiNoteNumberToString i)
     else
-        ((scale model.note
+        scale model.note
             model.octave
             model.formulaName
             model.range
-            (not (model.rootNoteDouble))
-         )
+            (not model.rootNoteDouble)
             |> List.take 36
-            |> List.map (\i -> midiNoteNumberToString (i))
-        )
+            |> List.map (\i -> midiNoteNumberToString i)
 
 
 resultMatrixDiv : Model -> Html Msg
@@ -426,17 +426,17 @@ resultMatrixDiv model =
         selectedCellNONE =
             ""
     in
-        div
-            [ classList
-                [ ( "matrix", True )
-                , ( "result", True )
-                , ( "inline-block", True )
-                ]
+    div
+        [ classList
+            [ ( "matrix", True )
+            , ( "result", True )
+            , ( "inline-block", True )
             ]
-            (matrixOfStrings "Result"
-                (notesForModelState model)
-                selectedCellNONE
-            )
+        ]
+        (matrixOfStrings "Result"
+            (notesForModelState model)
+            selectedCellNONE
+        )
 
 
 instrumentSelect : Model -> Html Msg
@@ -452,7 +452,7 @@ octaveRangeSelect model =
     div [ class "select-cell" ]
         [ select [ onInput OctaveRangeChanged, name "Range", class "soflow" ]
             -- pass the model range as first argument so the menu can display '3' on start up
-            ((List.range 1 6) |> List.map (intToOption model.range))
+            (List.range 1 6 |> List.map (intToOption model.range))
         ]
 
 
@@ -497,7 +497,15 @@ audioBannerDiv model =
             button [ onClick ToggleAudio ] [ text "Play" ]
           else
             button [ onClick ToggleAudio ] [ text "Stop" ]
-        , input [ onInput BPMChanged, id "bpm", type_ "range", Html.Attributes.min "10", Html.Attributes.max "200" ] []
+        , input
+            [ onInput BPMChanged
+            , id "bpm"
+            , type_ "range"
+            , Html.Attributes.min "10"
+            , Html.Attributes.max "200"
+            , Html.Attributes.value (model.bpm |> toString)
+            ]
+            []
         , span [] [ text (model.bpm |> toString) ]
         ]
 
