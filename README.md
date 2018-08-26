@@ -12,7 +12,7 @@
 ---
 ### Compile:
 
-`elm-make ./elm/Main.elm  --output=./js/Main.js`
+`elm make ./elm/Main.elm --optimize --output=./js/Main.js`
 ___
 
 # LICENSE
