@@ -1,16 +1,16 @@
 module Fretboard exposing (render)
 
+import Fingering exposing (fingering)
 import FretboardConstants exposing (..)
 import Notes
     exposing
         ( midiNoteNumberToNoteAndOctave
         , noteAndOctaveToMidiNoteNumber
         )
-import WesternMusicData exposing (NoteCollection)
-import Tuning exposing (..)
 import Svg exposing (..)
 import Svg.Attributes exposing (..)
-import Fingering exposing (fingering)
+import Tuning exposing (..)
+import WesternMusicData exposing (NoteCollection)
 
 
 shadowfilter : Svg msg
@@ -47,11 +47,11 @@ renderBoard board =
     rect
         [ fill fbBoardFill
         , stroke fbBoardStroke
-        , strokeWidth (fbBoardStrokeWidth |> toString)
-        , x (fbBoardOffsetX |> toString)
-        , y (fbBoardOffsetY |> toString)
-        , width (fbBoardWidth |> toString)
-        , height (toString board.boardHeight)
+        , strokeWidth (String.fromInt fbBoardStrokeWidth)
+        , x (String.fromInt fbBoardOffsetX)
+        , y (String.fromInt fbBoardOffsetY)
+        , width (String.fromInt fbBoardWidth)
+        , height (String.fromInt board.boardHeight)
         ]
         []
 
@@ -65,11 +65,11 @@ renderFretSideDotArea board =
     rect
         [ fill fbBoardFretNumberAreaFill
         , stroke fbBoardStroke
-        , strokeWidth (fbBoardStrokeWidth |> toString)
-        , x (fbBoardOffsetX |> toString)
-        , y (fbBoardOffsetY |> toString)
-        , width (fbBoardWidth |> toString)
-        , height (fbBoardfretNumberHeight |> toString)
+        , strokeWidth (String.fromInt fbBoardStrokeWidth)
+        , x (String.fromInt fbBoardOffsetX)
+        , y (String.fromInt fbBoardOffsetY)
+        , width (String.fromInt fbBoardWidth)
+        , height (String.fromInt fbBoardfretNumberHeight)
         ]
         []
 
@@ -86,41 +86,41 @@ renderFretSideDots board =
         fretOffset =
             2
     in
-        sideDots
-            |> List.indexedMap
-                (\index n ->
-                    case n of
-                        "." ->
-                            circle
-                                [ cx ((((index) * board.fretSpacing) + (board.fretSpacing // fretOffset)) |> toString)
-                                , cy (10 |> toString)
-                                , r (radius |> toString)
+    sideDots
+        |> List.indexedMap
+            (\index n ->
+                case n of
+                    "." ->
+                        circle
+                            [ cx (String.fromInt ((index * board.fretSpacing) + (board.fretSpacing // fretOffset)))
+                            , cy (String.fromInt 10)
+                            , r (String.fromInt radius)
+                            , fill fbBoardFretNumberColor
+                            ]
+                            []
+
+                    ":" ->
+                        svg
+                            []
+                            [ circle
+                                [ cx (String.fromInt ((index * board.fretSpacing) + (board.fretSpacing // fretOffset)))
+                                , cy (String.fromInt 7)
+                                , r (String.fromInt radius)
                                 , fill fbBoardFretNumberColor
                                 ]
                                 []
-
-                        ":" ->
-                            svg
-                                []
-                                [ circle
-                                    [ cx (((index * board.fretSpacing) + (board.fretSpacing // fretOffset)) |> toString)
-                                    , cy (7 |> toString)
-                                    , r (radius |> toString)
-                                    , fill fbBoardFretNumberColor
-                                    ]
-                                    []
-                                , circle
-                                    [ cx (((index * board.fretSpacing) + (board.fretSpacing // fretOffset)) |> toString)
-                                    , cy (13 |> toString)
-                                    , r (radius |> toString)
-                                    , fill fbBoardFretNumberColor
-                                    ]
-                                    []
+                            , circle
+                                [ cx (String.fromInt ((index * board.fretSpacing) + (board.fretSpacing // fretOffset)))
+                                , cy (String.fromInt 13)
+                                , r (String.fromInt radius)
+                                , fill fbBoardFretNumberColor
                                 ]
+                                []
+                            ]
 
-                        _ ->
-                            circle [] []
-                )
+                    _ ->
+                        circle [] []
+            )
 
 
 
@@ -133,8 +133,8 @@ renderNut board =
         [ x1 "0"
         , y1 "0"
         , x2 "0"
-        , y2 (board.boardHeight |> toString)
-        , strokeWidth (4 |> toString)
+        , y2 (String.fromInt board.boardHeight)
+        , strokeWidth (String.fromInt 4)
         , stroke fbNutStrokeColor
         ]
         []
@@ -154,10 +154,10 @@ renderFrets board =
 fret : Int -> Board -> Svg msg
 fret fretNumber board =
     line
-        [ x1 ((fretNumber * board.fretSpacing) |> toString)
-        , y1 (fbBoardfretNumberHeight |> toString)
-        , x2 ((fretNumber * board.fretSpacing) |> toString)
-        , y2 (board.boardHeight |> toString)
+        [ x1 (String.fromInt (fretNumber * board.fretSpacing))
+        , y1 (String.fromInt fbBoardfretNumberHeight)
+        , x2 (String.fromInt (fretNumber * board.fretSpacing))
+        , y2 (String.fromInt board.boardHeight)
         , strokeWidth "2"
         , stroke fbFretStroke
         ]
@@ -183,11 +183,14 @@ renderInlays board =
                     -- Don't draw inlays if fretCount == 16 and fret >= 16
                     if board.fretCount == 16 && (i + 1) >= 16 then
                         circle [] []
+
                     else
                         inlay i board Single
                     -- "+ 1" is because of fret zero/open string
+
                 else if List.member (i + 1) [ 12 + 1, 24 + 1 ] then
-                    (inlay i board Double)
+                    inlay i board Double
+
                 else
                     circle [] []
             )
@@ -198,9 +201,9 @@ inlay fretNumber board inlayPosition =
     case inlayPosition of
         Single ->
             circle
-                [ cx (((fretNumber * board.fretSpacing) + (board.fretSpacing // 2)) |> toString)
-                , cy (((board.boardHeight + fbBoardfretNumberHeight) // 2) |> toString)
-                , r (fbSingleInlayRadius |> toString)
+                [ cx (String.fromInt ((fretNumber * board.fretSpacing) + (board.fretSpacing // 2)))
+                , cy (String.fromInt ((board.boardHeight + fbBoardfretNumberHeight) // 2))
+                , r (String.fromInt fbSingleInlayRadius)
                 , fill fbInlayFillColor
                 ]
                 []
@@ -212,16 +215,16 @@ inlay fretNumber board inlayPosition =
             svg
                 []
                 [ circle
-                    [ cx (((fretNumber * board.fretSpacing) + (board.fretSpacing // 2)) |> toString)
-                    , cy ((((board.boardHeight + fbBoardfretNumberHeight) // 4)) |> toString)
-                    , r (fbDoubleInlayRadius |> toString)
+                    [ cx (String.fromInt ((fretNumber * board.fretSpacing) + (board.fretSpacing // 2)))
+                    , cy (String.fromInt ((board.boardHeight + fbBoardfretNumberHeight) // 4))
+                    , r (String.fromInt fbDoubleInlayRadius)
                     , fill fbInlayFillColor
                     ]
                     []
                 , circle
-                    [ cx (((fretNumber * board.fretSpacing) + (board.fretSpacing // 2)) |> toString)
-                    , cy ((((board.boardHeight + fbBoardfretNumberHeight) // 4) * 3) |> toString)
-                    , r (fbDoubleInlayRadius |> toString)
+                    [ cx (String.fromInt ((fretNumber * board.fretSpacing) + (board.fretSpacing // 2)))
+                    , cy (String.fromInt (((board.boardHeight + fbBoardfretNumberHeight) // 4) * 3))
+                    , r (String.fromInt fbDoubleInlayRadius)
                     , fill fbInlayFillColor
                     ]
                     []
@@ -241,11 +244,11 @@ renderStrings instrumentName board =
 string : Int -> Int -> Board -> Svg msg
 string stringNumber thickness board =
     line
-        [ x1 (board.fretSpacing |> toString)
-        , y1 (fbBoardfretNumberHeight + fbStringOffset + (fbStringSpacing * stringNumber) |> toString)
-        , x2 (fbBoardWidth |> toString)
-        , y2 (fbBoardfretNumberHeight + fbStringOffset + (fbStringSpacing * stringNumber) |> toString)
-        , strokeWidth (thickness |> toString)
+        [ x1 (String.fromInt board.fretSpacing)
+        , y1 (String.fromInt (fbBoardfretNumberHeight + fbStringOffset + (fbStringSpacing * stringNumber)))
+        , x2 (String.fromInt fbBoardWidth)
+        , y2 (String.fromInt (fbBoardfretNumberHeight + fbStringOffset + (fbStringSpacing * stringNumber)))
+        , strokeWidth (String.fromInt thickness)
         , stroke fbStringColor
         ]
         []
@@ -264,16 +267,15 @@ renderOpenStringNoteNames board =
                     ( noteName, _, _ ) =
                         n
                 in
-                    (oneFinger
-                        i
-                        0
-                        (noteName |> String.toUpper)
-                        fbBoardFill
-                        fbBoardFill
-                        fbFingeringTextColorLight
-                        ""
-                        board
-                    )
+                oneFinger
+                    i
+                    0
+                    (noteName |> String.toUpper)
+                    fbBoardFill
+                    fbBoardFill
+                    fbFingeringTextColorLight
+                    ""
+                    board
             )
 
 
@@ -296,6 +298,7 @@ oneStringFingering stringNumber list board =
             (\i noteAtFret ->
                 if noteAtFret == -1 then
                     circle [] []
+
                 else
                     let
                         ( noteName, _ ) =
@@ -304,24 +307,25 @@ oneStringFingering stringNumber list board =
                         ( rootNoteName, _ ) =
                             Notes.midiNoteNumberToNoteAndOctave board.rootNoteMDINumber
                     in
-                        if noteName == rootNoteName then
-                            oneFinger stringNumber
-                                i
-                                noteName
-                                fbFingeringFillColorRootNote
-                                fbFingeringCircleStrokeColorNormal
-                                fbFingeringTextColorNormal
-                                ""
-                                board
-                        else
-                            oneFinger stringNumber
-                                i
-                                noteName
-                                fbFingeringFillColorNormal
-                                fbFingeringCircleStrokeColorNormal
-                                fbFingeringTextColorNormal
-                                "url(#shadow)"
-                                board
+                    if noteName == rootNoteName then
+                        oneFinger stringNumber
+                            i
+                            noteName
+                            fbFingeringFillColorRootNote
+                            fbFingeringCircleStrokeColorNormal
+                            fbFingeringTextColorNormal
+                            ""
+                            board
+
+                    else
+                        oneFinger stringNumber
+                            i
+                            noteName
+                            fbFingeringFillColorNormal
+                            fbFingeringCircleStrokeColorNormal
+                            fbFingeringTextColorNormal
+                            "url(#shadow)"
+                            board
             )
 
 
@@ -329,9 +333,9 @@ oneFinger : Int -> Int -> String -> String -> String -> String -> String -> Boar
 oneFinger stringNumber index noteName fillColor strokeColor textColor filterURL board =
     svg []
         [ circle
-            [ cx ((((index) * board.fretSpacing) + (board.fretSpacing // 2)) |> toString)
-            , cy (((stringNumber * fbStringSpacing) + fbStringOffset + fbBoardfretNumberHeight) |> toString)
-            , r (fbFingeringRadius |> toString)
+            [ cx (String.fromInt ((index * board.fretSpacing) + (board.fretSpacing // 2)))
+            , cy (String.fromInt ((stringNumber * fbStringSpacing) + fbStringOffset + fbBoardfretNumberHeight))
+            , r (String.fromInt fbFingeringRadius)
             , fill fillColor
             , stroke strokeColor
             , Svg.Attributes.filter filterURL
@@ -340,8 +344,8 @@ oneFinger stringNumber index noteName fillColor strokeColor textColor filterURL 
         , text_
             [ textAnchor "middle"
             , stroke textColor
-            , x ((((index) * board.fretSpacing) + (board.fretSpacing // 2)) |> toString)
-            , y (((stringNumber * fbStringSpacing) + fbStringOffset + 3 + fbBoardfretNumberHeight) |> toString)
+            , x (String.fromInt ((index * board.fretSpacing) + (board.fretSpacing // 2)))
+            , y (String.fromInt ((stringNumber * fbStringSpacing) + fbStringOffset + 3 + fbBoardfretNumberHeight))
             , fontWeight "200"
             , fontSize "10px"
             ]
@@ -370,7 +374,7 @@ type alias Board =
 
 openStrings : String -> List IString
 openStrings instrumentName =
-    (Tuning.strings tuningPool instrumentName)
+    Tuning.strings tuningPool instrumentName
 
 
 stringCount : String -> Int
@@ -380,7 +384,7 @@ stringCount instrumentName =
 
 boardHeight : String -> Int
 boardHeight instrumentName =
-    ((stringCount instrumentName) - 1) * fbStringSpacing + (fbStringOffset * 2) + fbBoardfretNumberHeight
+    (stringCount instrumentName - 1) * fbStringSpacing + (fbStringOffset * 2) + fbBoardfretNumberHeight
 
 
 
@@ -389,7 +393,7 @@ boardHeight instrumentName =
 
 openStringMidiNoteNumber : String -> List Int
 openStringMidiNoteNumber instrumentName =
-    (openStrings instrumentName)
+    openStrings instrumentName
         |> List.map
             (\( n, o, _ ) -> Maybe.withDefault 0 (Notes.noteAndOctaveToMidiNoteNumber n o))
 
@@ -414,7 +418,7 @@ render : String -> NoteCollection -> Svg msg
 render instrumentName noteCollection =
     let
         ( _, _, fretCount ) =
-            (openStrings instrumentName)
+            openStrings instrumentName
                 |> List.head
                 |> Maybe.withDefault ( "", 0, 16 )
 
@@ -429,31 +433,31 @@ render instrumentName noteCollection =
             , fingering = fingering instrumentName noteCollection fretCount
             }
     in
-        svg
-            [ width "860"
-            , height "280"
-            , viewBox "0 0 860 280"
-            ]
-            ((renderFingerings board)
-                |> List.append
-                    ((renderOpenStringNoteNames board)
-                        |> List.append
-                            ((renderStrings instrumentName board)
-                                |> List.append
-                                    ((renderInlays board)
-                                        |> List.append
-                                            ((renderFretSideDots board)
-                                                |> List.append
-                                                    ((renderFrets board)
-                                                        |> List.append
-                                                            [ shadowfilter
-                                                            , renderBoard board
-                                                            , renderNut board
-                                                            , renderFretSideDotArea board
-                                                            ]
-                                                    )
-                                            )
-                                    )
-                            )
-                    )
-            )
+    svg
+        [ width "860"
+        , height "280"
+        , viewBox "0 0 860 280"
+        ]
+        (renderFingerings board
+            |> List.append
+                (renderOpenStringNoteNames board
+                    |> List.append
+                        (renderStrings instrumentName board
+                            |> List.append
+                                (renderInlays board
+                                    |> List.append
+                                        (renderFretSideDots board
+                                            |> List.append
+                                                (renderFrets board
+                                                    |> List.append
+                                                        [ shadowfilter
+                                                        , renderBoard board
+                                                        , renderNut board
+                                                        , renderFretSideDotArea board
+                                                        ]
+                                                )
+                                        )
+                                )
+                        )
+                )
+        )

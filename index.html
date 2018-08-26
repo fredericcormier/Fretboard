@@ -34,13 +34,18 @@
     <script src="lib/tone.min.js"></script>
     <script src="lib/logger.min.js"></script>
     <script src="lib/fbaudio.js"></script>
-    <script src="js/Main.js"></script>
+    <script src="js/Main-min.js"></script>
 
     <script>
         Logger.useDefaults();
 
-        var node = document.getElementById('elm-app')
-        var app = Elm.Main.embed(node, "nevermind");
+        // var node = document.getElementById('elm-app')
+        // var app = Elm.Main.init(node, "nevermind");
+
+        var app = Elm.Main.init({
+              node: document.getElementById('elm-app'),
+              flags: "nevermind"
+        });
 
         var fba = new FBAudio;
 

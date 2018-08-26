@@ -1,17 +1,18 @@
-port module Main exposing (..)
+port module Main exposing (Model, Msg(..), arpeggioPatterns, arpeggioPatternsSelect, audioBannerDiv, audioStart, audioStop, boolToChoice, boolToOption, bpmChanged, cellOfString, choiceToBool, doubleRootChoices, doubleRootSelect, formulaMatrixDiv, fretboardDiv, fretboardSelectionDiv, init, instrumentSelect, intToOption, main, matrixOfStrings, modeMatrixDiv, noteMatrixDiv, notesChanged, notesForAudio, notesForModelState, octaveMatrixDiv, octaveRangeSelect, resultMatrixDiv, selectionH1, stringToOption, subscriptions, update, view)
 
-import WesternMusicData exposing (..)
+import Browser exposing (..)
+import Fretboard exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick, onInput)
 import Notes exposing (..)
 import Tuning exposing (..)
-import Fretboard exposing (..)
+import WesternMusicData exposing (..)
 
 
 main : Program (Maybe String) Model Msg
 main =
-    Html.programWithFlags
+    Browser.element
         { init = init
         , view = view
         , update = update
@@ -76,9 +77,9 @@ init s =
             , rootNoteDouble = True
             }
     in
-        ( initialModel
-        , notesChanged (notesForAudio initialModel)
-        )
+    ( initialModel
+    , notesChanged (notesForAudio initialModel)
+    )
 
 
 subscriptions : Model -> Sub Msg
@@ -123,27 +124,27 @@ update msg model =
                         newModel =
                             { model | formulaName = v }
                     in
-                        ( newModel
-                        , notesChanged (notesForAudio newModel)
-                        )
+                    ( newModel
+                    , notesChanged (notesForAudio newModel)
+                    )
 
                 "Note" ->
                     let
                         newModel =
                             { model | note = v }
                     in
-                        ( newModel
-                        , notesChanged (notesForAudio newModel)
-                        )
+                    ( newModel
+                    , notesChanged (notesForAudio newModel)
+                    )
 
                 "Octave" ->
                     let
                         newModel =
-                            { model | octave = Result.withDefault 0 (String.toInt v) }
+                            { model | octave = Maybe.withDefault 0 (String.toInt v) }
                     in
-                        ( newModel
-                        , notesChanged (notesForAudio newModel)
-                        )
+                    ( newModel
+                    , notesChanged (notesForAudio newModel)
+                    )
 
                 "Mode" ->
                     case v of
@@ -152,18 +153,18 @@ update msg model =
                                 newModel =
                                     { model | mode = v, formulaName = ionian }
                             in
-                                ( newModel
-                                , notesChanged (notesForAudio newModel)
-                                )
+                            ( newModel
+                            , notesChanged (notesForAudio newModel)
+                            )
 
                         "Chord" ->
                             let
                                 newModel =
                                     { model | mode = v, formulaName = major }
                             in
-                                ( newModel
-                                , notesChanged (notesForAudio newModel)
-                                )
+                            ( newModel
+                            , notesChanged (notesForAudio newModel)
+                            )
 
                         _ ->
                             ( model, notesChanged (notesForAudio model) )
@@ -177,11 +178,11 @@ update msg model =
         OctaveRangeChanged r ->
             let
                 newModel =
-                    { model | range = Result.withDefault 1 (String.toInt r) }
+                    { model | range = Maybe.withDefault 1 (String.toInt r) }
             in
-                ( newModel
-                , notesChanged (notesForAudio newModel)
-                )
+            ( newModel
+            , notesChanged (notesForAudio newModel)
+            )
 
         ToggleAudio ->
             case model.audioPlaying of
@@ -200,13 +201,13 @@ update msg model =
                 newModel =
                     { model | arpeggioPatterns = p }
             in
-                ( newModel
-                , notesChanged (notesForAudio newModel)
-                )
+            ( newModel
+            , notesChanged (notesForAudio newModel)
+            )
 
         BPMChanged newBpm ->
-            ( { model | bpm = Result.withDefault 110 (String.toInt newBpm) }
-            , bpmChanged (model.bpm |> toString)
+            ( { model | bpm = Maybe.withDefault 110 (String.toInt newBpm) }
+            , bpmChanged (String.fromInt model.bpm)
             )
 
         DoubleRootChanged dr ->
@@ -214,9 +215,9 @@ update msg model =
                 newModel =
                     { model | rootNoteDouble = choiceToBool dr }
             in
-                ( newModel
-                , notesChanged (notesForAudio newModel)
-                )
+            ( newModel
+            , notesChanged (notesForAudio newModel)
+            )
 
 
 
@@ -254,17 +255,17 @@ stringToOption v =
 intToOption : OctaveRange -> Int -> Html Msg
 intToOption range i =
     option
-        [ value (toString i)
+        [ value (String.fromInt i)
         , selected (i == range)
         ]
-        [ text (toString i) ]
+        [ text (String.fromInt i) ]
 
 
 boolToOption : Bool -> String -> Html Msg
 boolToOption dedup choice =
     option
-        [ value (choice)
-        , selected (choice == (boolToChoice dedup))
+        [ value choice
+        , selected (choice == boolToChoice dedup)
         ]
         [ text choice ]
 
@@ -313,7 +314,7 @@ selectionH1 model =
         [ text <|
             model.note
                 ++ " "
-                ++ (toString model.octave)
+                ++ String.fromInt model.octave
                 ++ " - "
                 ++ model.formulaName
         ]
@@ -341,8 +342,8 @@ octaveMatrixDiv model =
             ]
         ]
         (matrixOfStrings "Octave"
-            (List.map (\i -> toString (i)) (List.range -1 9))
-            (toString (model.octave))
+            (List.map (\i -> String.fromInt i) (List.range -1 9))
+            (String.fromInt model.octave)
         )
 
 
@@ -357,6 +358,7 @@ formulaMatrixDiv model =
                 ]
             ]
             (matrixOfStrings "Formula" (formulaNames chordFormulaPool) model.formulaName)
+
     else
         div
             [ classList
@@ -374,19 +376,19 @@ notesForAudio model =
         notes =
             notesForModelState model
     in
-        case model.arpeggioPatterns of
-            "Up" ->
-                notes
+    case model.arpeggioPatterns of
+        "Up" ->
+            notes
 
-            "Down" ->
-                List.reverse notes
+        "Down" ->
+            List.reverse notes
 
-            "Up And Down" ->
-                -- List.reverse notes |> List.append notes
-                notes ++ List.reverse notes
+        "Up And Down" ->
+            -- List.reverse notes |> List.append notes
+            notes ++ List.reverse notes
 
-            _ ->
-                notes
+        _ ->
+            notes
 
 
 
@@ -398,26 +400,23 @@ notesForAudio model =
 notesForModelState : Model -> List String
 notesForModelState model =
     if model.mode == chordMode then
-        ((chord model.note
+        chord model.note
             model.octave
             model.formulaName
             model.range
-            (not (model.rootNoteDouble))
+            (not model.rootNoteDouble)
             0
-         )
             |> List.take 36
-            |> List.map (\i -> midiNoteNumberToString (i))
-        )
+            |> List.map (\i -> midiNoteNumberToString i)
+
     else
-        ((scale model.note
+        scale model.note
             model.octave
             model.formulaName
             model.range
-            (not (model.rootNoteDouble))
-         )
+            (not model.rootNoteDouble)
             |> List.take 36
-            |> List.map (\i -> midiNoteNumberToString (i))
-        )
+            |> List.map (\i -> midiNoteNumberToString i)
 
 
 resultMatrixDiv : Model -> Html Msg
@@ -426,17 +425,17 @@ resultMatrixDiv model =
         selectedCellNONE =
             ""
     in
-        div
-            [ classList
-                [ ( "matrix", True )
-                , ( "result", True )
-                , ( "inline-block", True )
-                ]
+    div
+        [ classList
+            [ ( "matrix", True )
+            , ( "result", True )
+            , ( "inline-block", True )
             ]
-            (matrixOfStrings "Result"
-                (notesForModelState model)
-                selectedCellNONE
-            )
+        ]
+        (matrixOfStrings "Result"
+            (notesForModelState model)
+            selectedCellNONE
+        )
 
 
 instrumentSelect : Model -> Html Msg
@@ -452,7 +451,7 @@ octaveRangeSelect model =
     div [ class "select-cell" ]
         [ select [ onInput OctaveRangeChanged, name "Range", class "soflow" ]
             -- pass the model range as first argument so the menu can display '3' on start up
-            ((List.range 1 6) |> List.map (intToOption model.range))
+            (List.range 1 6 |> List.map (intToOption model.range))
         ]
 
 
@@ -495,10 +494,11 @@ audioBannerDiv model =
         ]
         [ if model.audioPlaying == False then
             button [ onClick ToggleAudio ] [ text "Play" ]
+
           else
             button [ onClick ToggleAudio ] [ text "Stop" ]
         , input [ onInput BPMChanged, id "bpm", type_ "range", Html.Attributes.min "10", Html.Attributes.max "200" ] []
-        , span [] [ text (model.bpm |> toString) ]
+        , span [] [ text (String.fromInt model.bpm) ]
         ]
 
 
@@ -516,6 +516,7 @@ fretboardDiv model =
                     model.rootNoteDouble
                 )
             ]
+
     else
         div
             [ id "fretboard"

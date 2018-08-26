@@ -1,13 +1,12 @@
-module Tuning
-    exposing
-        ( IString
-        , Tuning
-        , TuningName
-        , tuningPool
-        , strings
-        , tuningNames
-        , gauges
-        )
+module Tuning exposing
+    ( IString
+    , Tuning
+    , TuningName
+    , gauges
+    , strings
+    , tuningNames
+    , tuningPool
+    )
 
 
 stringGaugeThin =
@@ -76,6 +75,7 @@ strings l name =
         ( n, t, g ) :: xs ->
             if n == name then
                 t
+
             else
                 strings xs name
 
@@ -89,6 +89,7 @@ gauges l name =
         ( n, t, g ) :: xs ->
             if n == name then
                 g
+
             else
                 gauges xs name
 
@@ -599,5 +600,6 @@ tuningPool =
         , stringGaugeThin
         ]
       )
-      -- END OF POOOL
+
+    -- END OF POOOL
     ]

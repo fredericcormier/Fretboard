@@ -7,9 +7,10 @@
 		"uuidString": "BD1CD9E8-FB1D-45A1-A3BE-127D36030C12"
 		}
 	],
-"creatorBuild": "25900",
+"creatorBuild": "26680",
 "files": {
 	"\/.gitignore": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/.gitignore",
@@ -45,662 +46,677 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"\/elm-package.json": {
+	"\/elm-stuff\/0.19.0\/Fingering.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm-stuff\/0.19.0\/Fingering.elmi",
+		"oF": 0
+		},
+	"\/elm-stuff\/0.19.0\/Fingering.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm-stuff\/0.19.0\/Fingering.elmo",
+		"oF": 0
+		},
+	"\/elm-stuff\/0.19.0\/Fretboard.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm-stuff\/0.19.0\/Fretboard.elmo",
+		"oF": 0
+		},
+	"\/elm-stuff\/0.19.0\/FretboardConstants.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm-stuff\/0.19.0\/FretboardConstants.elmo",
+		"oF": 0
+		},
+	"\/elm-stuff\/0.19.0\/Main.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm-stuff\/0.19.0\/Main.elmo",
+		"oF": 0
+		},
+	"\/elm-stuff\/0.19.0\/Notes.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm-stuff\/0.19.0\/Notes.elmo",
+		"oF": 0
+		},
+	"\/elm-stuff\/0.19.0\/summary.dat": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm-stuff\/0.19.0\/summary.dat",
+		"oF": 0
+		},
+	"\/elm-stuff\/0.19.0\/Tuning.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm-stuff\/0.19.0\/Tuning.elmi",
+		"oF": 0
+		},
+	"\/elm-stuff\/0.19.0\/Tuning.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm-stuff\/0.19.0\/Tuning.elmo",
+		"oF": 0
+		},
+	"\/elm-stuff\/0.19.0\/WesternMusicData.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm-stuff\/0.19.0\/WesternMusicData.elmi",
+		"oF": 0
+		},
+	"\/elm-stuff\/0.19.0\/WesternMusicData.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm-stuff\/0.19.0\/WesternMusicData.elmo",
+		"oF": 0
+		},
+	"\/elm.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/elm-package-min.json",
+		"oAP": "\/elm-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Array.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Array.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Array.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Array.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Basics.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Basics.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Basics.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Basics.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Bitwise.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Bitwise.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Bitwise.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Bitwise.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Char.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Char.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Char.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Char.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Color.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Color.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Color.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Color.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Date.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Date.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Date.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Date.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Debug.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Debug.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Debug.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Debug.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Dict.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Dict.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Dict.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Dict.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/graph.dat": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/graph.dat",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Json-Decode.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Json-Decode.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Json-Decode.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Json-Decode.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Json-Encode.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Json-Encode.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Json-Encode.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Json-Encode.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/List.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/List.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/List.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/List.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Maybe.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Maybe.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Maybe.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Maybe.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform-Cmd.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform-Cmd.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform-Cmd.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform-Cmd.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform-Sub.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform-Sub.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform-Sub.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform-Sub.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Process.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Process.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Process.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Process.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Random.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Random.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Random.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Random.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Regex.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Regex.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Regex.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Regex.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Result.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Result.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Result.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Result.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Set.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Set.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Set.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Set.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/String.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/String.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/String.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/String.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Task.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Task.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Task.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Task.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Time.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Time.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Time.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Time.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Tuple.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Tuple.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Tuple.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Tuple.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/graph.dat": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/graph.dat",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Attributes.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Attributes.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Attributes.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Attributes.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Events.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Events.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Events.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Events.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Keyed.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Keyed.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Keyed.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Keyed.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Lazy.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Lazy.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Lazy.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Lazy.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/graph.dat": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/graph.dat",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg-Attributes.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg-Attributes.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg-Attributes.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg-Attributes.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg-Events.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg-Events.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg-Events.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg-Events.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg-Keyed.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg-Keyed.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg-Keyed.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg-Keyed.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg-Lazy.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg-Lazy.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg-Lazy.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg-Lazy.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/svg\/2.0.0\/Svg.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/graph.dat": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/graph.dat",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Debug.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Debug.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Debug.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Debug.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Expando.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Expando.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Expando.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Expando.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Helpers.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Helpers.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Helpers.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Helpers.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-History.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-History.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-History.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-History.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Metadata.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Metadata.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Metadata.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Metadata.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Overlay.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Overlay.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Overlay.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Overlay.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Report.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Report.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Report.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Report.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Fingering.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Fingering.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Fingering.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Fingering.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Fretboard.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Fretboard.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Fretboard.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Fretboard.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/FretboardConstants.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/FretboardConstants.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/FretboardConstants.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/FretboardConstants.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Main.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Main.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Main.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Main.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Notes.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Notes.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Notes.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Notes.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Tuning.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Tuning.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Tuning.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/Tuning.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/WesternMusicData.elmi": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/WesternMusicData.elmi",
-		"oF": 0
-		},
-	"\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/WesternMusicData.elmo": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/build-artifacts\/0.18.0\/user\/project\/1.0.0\/WesternMusicData.elmo",
-		"oF": 0
-		},
-	"\/elm-stuff\/exact-dependencies.json": {
+	"\/elm\/elm-package.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/elm-stuff\/exact-dependencies-min.json",
+		"oAP": "\/elm\/elm-package-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/.eslintrc": {
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Array.elmi": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/.eslintrc",
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Array.elmi",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/.gitignore": {
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Array.elmo": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/.gitignore",
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Array.elmo",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/.travis.yml": {
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Basics.elmi": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/.travis.yml",
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Basics.elmi",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/changelog.md": {
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Basics.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Basics.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Bitwise.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Bitwise.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Bitwise.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Bitwise.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Char.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Char.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Char.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Char.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Color.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Color.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Color.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Color.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Date.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Date.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Date.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Date.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Debug.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Debug.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Debug.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Debug.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Dict.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Dict.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Dict.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Dict.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/graph.dat": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/graph.dat",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Json-Decode.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Json-Decode.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Json-Decode.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Json-Decode.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Json-Encode.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Json-Encode.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Json-Encode.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Json-Encode.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/List.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/List.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/List.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/List.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Maybe.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Maybe.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Maybe.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Maybe.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform-Cmd.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform-Cmd.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform-Cmd.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform-Cmd.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform-Sub.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform-Sub.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform-Sub.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform-Sub.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Platform.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Process.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Process.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Process.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Process.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Random.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Random.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Random.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Random.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Regex.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Regex.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Regex.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Regex.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Result.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Result.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Result.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Result.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Set.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Set.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Set.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Set.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/String.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/String.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/String.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/String.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Task.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Task.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Task.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Task.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Time.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Time.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Time.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Time.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Tuple.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Tuple.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Tuple.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/core\/5.1.1\/Tuple.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/graph.dat": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/graph.dat",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Attributes.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Attributes.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Attributes.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Attributes.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Events.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Events.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Events.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Events.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Keyed.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Keyed.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Keyed.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Keyed.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Lazy.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Lazy.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Lazy.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html-Lazy.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/html\/2.0.0\/Html.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/graph.dat": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/graph.dat",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Debug.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Debug.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Debug.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Debug.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Expando.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Expando.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Expando.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Expando.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Helpers.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Helpers.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Helpers.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Helpers.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-History.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-History.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-History.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-History.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Metadata.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Metadata.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Metadata.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Metadata.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Overlay.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Overlay.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Overlay.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Overlay.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Report.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Report.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Report.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom-Report.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom.elmi": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom.elmi",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom.elmo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/build-artifacts\/0.18.0\/elm-lang\/virtual-dom\/2.0.4\/VirtualDom.elmo",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/exact-dependencies.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/elm\/elm-stuff\/exact-dependencies-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/.eslintrc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/.eslintrc",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/.gitignore",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/.travis.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/.travis.yml",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/changelog.md": {
+		"cB": 0,
 		"cS": 0,
 		"eF": 1,
 		"eL": 1,
-		"eLB": 0,
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/changelog.html",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/changelog.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -709,16 +725,16 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/CONTRIBUTING.md": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/CONTRIBUTING.md": {
+		"cB": 0,
 		"cS": 0,
 		"eF": 1,
 		"eL": 1,
-		"eLB": 0,
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/CONTRIBUTING.html",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/CONTRIBUTING.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -727,30 +743,31 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/elm-package.json": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/elm-package.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/elm-package-min.json",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/elm-package-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/LICENSE": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/LICENSE": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/LICENSE",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/LICENSE",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/README.md": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/README.md": {
+		"cB": 0,
 		"cS": 0,
 		"eF": 1,
 		"eL": 1,
-		"eLB": 0,
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/README.html",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -759,424 +776,466 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Array.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Array.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Array.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Array.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Basics.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Basics.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Basics.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Basics.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Bitwise.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Bitwise.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Bitwise.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Bitwise.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Char.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Char.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Char.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Char.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Color.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Color.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Color.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Color.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Date.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Date.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Date.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Date.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Debug.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Debug.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Debug.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Debug.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Dict.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Dict.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Dict.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Dict.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Json\/Decode.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Json\/Decode.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Json\/js\/Decode.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Json\/js\/Decode.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Json\/Encode.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Json\/Encode.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Json\/js\/Encode.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Json\/js\/Encode.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/List.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/List.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/List.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/List.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Maybe.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Maybe.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Maybe.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Maybe.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Array.js": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Array.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Array-min.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Array-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Basics.js": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Basics.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Basics-min.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Basics-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Bitwise.js": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Bitwise.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Bitwise-min.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Bitwise-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Char.js": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Char.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Char-min.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Char-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Date.js": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Date.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Date-min.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Date-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Debug.js": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Debug.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Debug-min.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Debug-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Json.js": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Json.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Json-min.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Json-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/List.js": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/List.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/List-min.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/List-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Platform.js": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Platform.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Platform-min.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Platform-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Regex.js": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Regex.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Regex-min.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Regex-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Scheduler.js": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Scheduler.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Scheduler-min.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Scheduler-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/String.js": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/String.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/String-min.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/String-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Time.js": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Time.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Time-min.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Time-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Utils.js": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Utils.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Utils-min.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Native\/Utils-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Platform.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Platform.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Platform.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Platform.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Platform\/Cmd.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Platform\/Cmd.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Platform\/js\/Cmd.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Platform\/js\/Cmd.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Platform\/Sub.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Platform\/Sub.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Platform\/js\/Sub.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Platform\/js\/Sub.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Process.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Process.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Process.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Process.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Random.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Random.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Random.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Random.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Regex.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Regex.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Regex.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Regex.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Result.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Result.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Result.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Result.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Set.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Set.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Set.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Set.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/String.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/String.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/String.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/String.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Task.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Task.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Task.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Task.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Time.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Time.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Time.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Time.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Tuple.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/Tuple.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Tuple.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/src\/js\/Tuple.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/elm-package.json": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/elm-package.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/elm-package-min.json",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/elm-package-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Main.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Main.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/js\/Main.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/js\/Main.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/run-tests.sh": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/run-tests.sh": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/run-tests.sh",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/run-tests.sh",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Array.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Array.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Array.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Array.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Basics.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Basics.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Basics.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Basics.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Bitwise.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Bitwise.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Bitwise.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Bitwise.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Char.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Char.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Char.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Char.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/CodeGen.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/CodeGen.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/CodeGen.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/CodeGen.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Dict.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Dict.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Dict.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Dict.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Equality.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Equality.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Equality.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Equality.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Json.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Json.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Json.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Json.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/List.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/List.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/List.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/List.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Maybe.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Maybe.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Maybe.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Maybe.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Regex.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Regex.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Regex.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Regex.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Result.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Result.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Result.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Result.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Set.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/Set.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Set.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/Set.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/String.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/String.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/String.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/core\/5.1.1\/tests\/Test\/js\/String.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/.gitignore": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/.gitignore": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/.gitignore",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/.gitignore",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/elm-package.json": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/elm-package.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/elm-package-min.json",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/elm-package-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/LICENSE": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/LICENSE": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/LICENSE",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/LICENSE",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/properties-vs-attributes.md": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/properties-vs-attributes.md": {
+		"cB": 0,
 		"cS": 0,
 		"eF": 1,
 		"eL": 1,
-		"eLB": 0,
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/properties-vs-attributes.html",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/properties-vs-attributes.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1185,16 +1244,16 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/README.md": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/README.md": {
+		"cB": 0,
 		"cS": 0,
 		"eF": 1,
 		"eL": 1,
-		"eLB": 0,
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/README.html",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1203,72 +1262,80 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/js\/Html.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/js\/Html.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html\/Attributes.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html\/Attributes.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html\/js\/Attributes.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html\/js\/Attributes.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html\/Events.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html\/Events.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html\/js\/Events.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html\/js\/Events.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html\/Keyed.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html\/Keyed.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html\/js\/Keyed.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html\/js\/Keyed.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html\/Lazy.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html\/Lazy.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html\/js\/Lazy.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/html\/2.0.0\/src\/Html\/js\/Lazy.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/.gitignore": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/.gitignore": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/.gitignore",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/.gitignore",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/elm-package.json": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/.travis.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/.travis.yml",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/elm-package.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/elm-package-min.json",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/elm-package-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/examples\/Logo.elm": {
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/examples\/js\/Logo.js",
-		"oF": 0
-		},
-	"\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/LICENSE": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/LICENSE": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/LICENSE",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/LICENSE",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/README.md": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/README.md": {
+		"cB": 0,
 		"cS": 0,
 		"eF": 1,
 		"eL": 1,
-		"eLB": 0,
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/README.html",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -1277,227 +1344,172 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/src\/Svg.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/Native\/Debug.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/Native\/Debug-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/Native\/VirtualDom.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/Native\/VirtualDom-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/src\/js\/Svg.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/js\/VirtualDom.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/src\/Svg\/Attributes.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/Debug.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/src\/Svg\/js\/Attributes.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/js\/Debug.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/src\/Svg\/Events.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/Expando.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/src\/Svg\/js\/Events.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/js\/Expando.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/src\/Svg\/Keyed.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/Helpers.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/src\/Svg\/js\/Keyed.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/js\/Helpers.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/src\/Svg\/Lazy.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/History.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/svg\/2.0.0\/src\/Svg\/js\/Lazy.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/js\/History.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/.gitignore": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/Metadata.elm": {
+		"cB": 0,
 		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/.gitignore",
+		"oA": 0,
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/js\/Metadata.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/.travis.yml": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/Overlay.elm": {
+		"cB": 0,
 		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/.travis.yml",
+		"oA": 0,
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/js\/Overlay.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/elm-package.json": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/Report.elm": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/js\/Report.js",
+		"oF": 0
+		},
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/elm-package.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/elm-package-min.json",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/elm-package-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/LICENSE": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/Native\/TestHelpers.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/Native\/TestHelpers-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/run-tests.sh": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/LICENSE",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/run-tests.sh",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/README.md": {
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"eLB": 0,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/Native\/Debug.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/Native\/Debug-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/Native\/VirtualDom.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/Native\/VirtualDom-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/TestCases\/Lazy.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/js\/VirtualDom.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/TestCases\/js\/Lazy.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/Debug.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/TestHelpers.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/js\/Debug.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/js\/TestHelpers.js",
 		"oF": 0
 		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/Expando.elm": {
+	"\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/TestMain.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/js\/Expando.js",
-		"oF": 0
-		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/Helpers.elm": {
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/js\/Helpers.js",
-		"oF": 0
-		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/History.elm": {
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/js\/History.js",
-		"oF": 0
-		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/Metadata.elm": {
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/js\/Metadata.js",
-		"oF": 0
-		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/Overlay.elm": {
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/js\/Overlay.js",
-		"oF": 0
-		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/Report.elm": {
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/src\/VirtualDom\/js\/Report.js",
-		"oF": 0
-		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/elm-package.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/elm-package-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/Native\/TestHelpers.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/Native\/TestHelpers-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/run-tests.sh": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/run-tests.sh",
-		"oF": 0
-		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/TestCases\/Lazy.elm": {
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/TestCases\/js\/Lazy.js",
-		"oF": 0
-		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/TestHelpers.elm": {
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/js\/TestHelpers.js",
-		"oF": 0
-		},
-	"\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/TestMain.elm": {
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/js\/TestMain.js",
+		"oAP": "\/elm\/elm-stuff\/packages\/elm-lang\/virtual-dom\/2.0.4\/tests\/js\/TestMain.js",
 		"oF": 0
 		},
 	"\/elm\/Fingering.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/elm\/js\/Fingering.js",
 		"oF": 0
 		},
 	"\/elm\/Fretboard.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/elm\/js\/Fretboard.js",
 		"oF": 0
 		},
 	"\/elm\/FretboardConstants.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/elm\/js\/FretboardConstants.js",
 		"oF": 0
 		},
 	"\/elm\/Main.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/elm\/js\/Main.js",
 		"oF": 0
 		},
 	"\/elm\/Notes.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/elm\/js\/Notes.js",
 		"oF": 0
 		},
 	"\/elm\/Tuning.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/elm\/js\/Tuning.js",
 		"oF": 0
 		},
 	"\/elm\/WesternMusicData.elm": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/elm\/js\/WesternMusicData.js",
@@ -1515,10 +1527,21 @@
 		"q": 100
 		},
 	"\/index.html": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/index.html",
 		"oF": 0
+		},
+	"\/js\/Main-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/Main-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/js\/Main.js": {
 		"ft": 64,
@@ -1527,7 +1550,7 @@
 		"oA": 0,
 		"oAP": "\/js\/Main-min.js",
 		"oF": 0,
-		"sC": 1,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/lib\/fbaudio.js": {
@@ -1571,16 +1594,17 @@
 		"tS": 0
 		},
 	"\/LICENSE.txt": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/LICENSE.txt",
 		"oF": 0
 		},
 	"\/README.md": {
+		"cB": 0,
 		"cS": 0,
 		"eF": 1,
 		"eL": 1,
-		"eLB": 0,
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
@@ -1595,6 +1619,7 @@
 		"uCM": 0
 		},
 	"\/sass\/.sass-cache\/a58ac0abbbbad88830f9c3c35fd4e65be404216e\/style.scssc": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sass\/.sass-cache\/a58ac0abbbbad88830f9c3c35fd4e65be404216e\/style.scssc",
@@ -1614,120 +1639,133 @@
 		"uL": 1
 		},
 	"\/sounds\/26-D1.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/26-D1.mp3",
 		"oF": 0
 		},
 	"\/sounds\/29-F1.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/29-F1.mp3",
 		"oF": 0
 		},
 	"\/sounds\/32-GS1.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/32-GS1.mp3",
 		"oF": 0
 		},
 	"\/sounds\/35-B1.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/35-B1.mp3",
 		"oF": 0
 		},
 	"\/sounds\/38-D2.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/38-D2.mp3",
 		"oF": 0
 		},
 	"\/sounds\/41-F2.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/41-F2.mp3",
 		"oF": 0
 		},
 	"\/sounds\/44-GS2.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/44-GS2.mp3",
 		"oF": 0
 		},
 	"\/sounds\/47-B2.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/47-B2.mp3",
 		"oF": 0
 		},
 	"\/sounds\/50-D3.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/50-D3.mp3",
 		"oF": 0
 		},
 	"\/sounds\/53-F3.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/53-F3.mp3",
 		"oF": 0
 		},
 	"\/sounds\/56-GS3.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/56-GS3.mp3",
 		"oF": 0
 		},
 	"\/sounds\/59-B3.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/59-B3.mp3",
 		"oF": 0
 		},
 	"\/sounds\/62-D4.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/62-D4.mp3",
 		"oF": 0
 		},
 	"\/sounds\/65-F4.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/65-F4.mp3",
 		"oF": 0
 		},
 	"\/sounds\/68-GS4.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/68-GS4.mp3",
 		"oF": 0
 		},
 	"\/sounds\/71-B4.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/71-B4.mp3",
 		"oF": 0
 		},
 	"\/sounds\/74-D5.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/74-D5.mp3",
 		"oF": 0
 		},
-	"\/sounds\/77-F5.aiff": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/sounds\/77-F5.aiff",
-		"oF": 0
-		},
 	"\/sounds\/77-F5.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/77-F5.mp3",
 		"oF": 0
 		},
 	"\/sounds\/80-GS5.mp3": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sounds\/80-GS5.mp3",
@@ -1740,7 +1778,7 @@
 		"name": "elm compile",
 		"predicateDataBase64Encoded": "YnBsaXN0MDDUAQIDBAUGZGVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QFgcIDxQcJicpMDQ5Oj1BRUpLTlVbX2FVJG51bGzTCQoLDA0OXxAXTlNDb21wb3VuZFByZWRpY2F0ZVR5cGVfEA9OU1N1YnByZWRpY2F0ZXNWJGNsYXNzEAGAAoAV0hALERNaTlMub2JqZWN0c6ESgAOAFNQLFRYXGBkaG18QEU5TUmlnaHRFeHByZXNzaW9uXxAQTlNMZWZ0RXhwcmVzc2lvbl8QE05TUHJlZGljYXRlT3BlcmF0b3KAE4AOgASAEdUdHh8gCyEiIyQlWU5TT3BlcmFuZF5OU1NlbGVjdG9yTmFtZV8QEE5TRXhwcmVzc2lvblR5cGVbTlNBcmd1bWVudHOABoAFEAOACIANXHZhbHVlRm9yS2V5OtIfCwwogAfSKissLVokY2xhc3NuYW1lWCRjbGFzc2VzXxAQTlNTZWxmRXhwcmVzc2lvbqMsLi9cTlNFeHByZXNzaW9uWE5TT2JqZWN00hALMTOhMoAJgAzTCx81Njc4WU5TS2V5UGF0aIALEAqACl1pbnB1dEZpbGVuYW1l0iorOzxfEBxOU0tleVBhdGhTcGVjaWZpZXJFeHByZXNzaW9uozsuL9IqKz4\/Xk5TTXV0YWJsZUFycmF5oz5AL1dOU0FycmF50iorQkNfEBNOU0tleVBhdGhFeHByZXNzaW9upEJELi9fEBROU0Z1bmN0aW9uRXhwcmVzc2lvbtNGHwtHSElfEA9OU0NvbnN0YW50VmFsdWWADxAAgBBULmVsbdIqK0xNXxAZTlNDb25zdGFudFZhbHVlRXhwcmVzc2lvbqNMLi\/VC09QUVJTSCMMVFpOU01vZGlmaWVyV05TRmxhZ3NaTlNQb3NpdGlvbl5OU09wZXJhdG9yVHlwZYASEAnSKitWV18QHE5TU3Vic3RyaW5nUHJlZGljYXRlT3BlcmF0b3KkWFlaL18QHE5TU3Vic3RyaW5nUHJlZGljYXRlT3BlcmF0b3JfEBlOU1N0cmluZ1ByZWRpY2F0ZU9wZXJhdG9yXxATTlNQcmVkaWNhdGVPcGVyYXRvctIqK1xdXxAVTlNDb21wYXJpc29uUHJlZGljYXRlo1xeL1tOU1ByZWRpY2F0ZdIqK0BgokAv0iorYmNfEBNOU0NvbXBvdW5kUHJlZGljYXRlo2JeL18QD05TS2V5ZWRBcmNoaXZlctFmZ1Ryb290gAEACAARABoAIwAtADIANwBQAFYAXQB3AIkAkACSAJQAlgCbAKYAqACqAKwAtQDJANwA8gD0APYA+AD6AQUBDwEeATEBPQE\/AUEBQwFFAUcBVAFZAVsBYAFrAXQBhwGLAZgBoQGmAagBqgGsAbMBvQG\/AcEBwwHRAdYB9QH5Af4CDQIRAhkCHgI0AjkCUAJXAmkCawJtAm8CdAJ5ApUCmQKkAq8CtwLCAtEC0wLVAtoC+QL+Ax0DOQNPA1QDbANwA3wDgQOEA4kDnwOjA7UDuAO9AAAAAAAAAgEAAAAAAAAAaAAAAAAAAAAAAAAAAAAAA78=",
 		"runOrder": 0,
-		"scriptSourceString": "elm-make .\/elm\/Main.elm --output=.\/js\/Main.js",
+		"scriptSourceString": "elm make .\/elm\/Main.elm --optimize --output=.\/js\/Main.js",
 		"scriptType": 1,
 		"uuidString": "C6128B50-E7B6-4CD5-B5BE-51B2DEE8EAAC"
 		}
@@ -1751,7 +1789,8 @@
 	"creationDate": 529342229,
 	"displayValue": "Fretboard",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-cocaine"
+	"iconImageName": "meme-cocaine",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -1759,6 +1798,7 @@
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
+	"autoprefixerEnableIEGrid": 0,
 	"babelAuxiliaryCommentAfter": "",
 	"babelAuxiliaryCommentBefore": "",
 	"babelConfigFileHandlingType": 0,
@@ -2287,6 +2327,10 @@
 			"active": 0,
 			"optionString": "'expression'"
 			},
+		"function-paren-newline": {
+			"active": 0,
+			"optionString": "'multiline'"
+			},
 		"generator-star-spacing": {
 			"active": 0,
 			"optionString": "{'before': true, 'after': false}"
@@ -2318,6 +2362,10 @@
 		"id-match": {
 			"active": 0,
 			"optionString": "'^[a-z]+([A-Z][a-z]+)*$', {'properties': false, 'onlyDeclarations': true}"
+			},
+		"implicit-arrow-linebreak": {
+			"active": 0,
+			"optionString": "'beside'"
 			},
 		"indent": {
 			"active": 0,
@@ -2351,9 +2399,9 @@
 			"active": 0,
 			"optionString": "{'beforeBlockComment': true}"
 			},
-		"lines-around-directive": {
+		"lines-between-class-members": {
 			"active": 0,
-			"optionString": "{'before': 'always', 'after': 'always'}"
+			"optionString": "'always', {exceptAfterSingleLine: false}"
 			},
 		"max-depth": {
 			"active": 0,
@@ -2383,6 +2431,10 @@
 			"active": 0,
 			"optionString": "{'max': 1}"
 			},
+		"multiline-comment-style": {
+			"active": 0,
+			"optionString": "'starred-block'"
+			},
 		"multiline-ternary": {
 			"active": 0,
 			"optionString": "'always'"
@@ -2392,14 +2444,6 @@
 			"optionString": "{'newIsCap': true, 'capIsNew': true, 'newIsCapExceptions': [], 'capIsNewExceptions': ['Array', 'Boolean', 'Date', 'Error', 'Function', 'Number', 'Object', 'RegExp', 'String', 'Symbol'], 'properties': true}"
 			},
 		"new-parens": {
-			"active": 0,
-			"optionString": ""
-			},
-		"newline-after-var": {
-			"active": 0,
-			"optionString": "'always'"
-			},
-		"newline-before-return": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -3503,7 +3547,8 @@
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"outputStyle": 0,
-		"syntaxCheckerStyle": 1
+		"syntaxCheckerStyle": 1,
+		"transpilerStyle": 1
 		},
 	"languageDefaultsCSS": {
 		"autoOutputAction": 0,
@@ -3536,6 +3581,7 @@
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
 		"outputStyle": 0,
+		"shouldRunCacheBuster": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
@@ -3547,6 +3593,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {
@@ -3577,7 +3624,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "kit",
 		"autoOutputPathReplace2": "html",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
@@ -3609,13 +3657,13 @@
 		"enableFootnotes": 1,
 		"enableLabels": 1,
 		"enableSmartQuotes": 1,
-		"escapeLineBreaks": 0,
 		"maskEmailAddresses": 1,
 		"outputFormat": 0,
 		"outputStyle": 0,
 		"parseMetadata": 1,
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
+		"shouldRunCacheBuster": 0,
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
@@ -3624,7 +3672,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsPNG": {
 		"autoOutputAction": 0,
@@ -3644,7 +3693,8 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
-		"outputStyle": 0
+		"outputStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
@@ -3672,7 +3722,8 @@
 		"logicless": 0,
 		"outputFormat": 0,
 		"outputStyle": 1,
-		"railsCompatible": 0
+		"railsCompatible": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
@@ -3725,7 +3776,8 @@
 			"autoOutputPathReplace1": "",
 			"autoOutputPathReplace2": "",
 			"autoOutputPathStyle": 2,
-			"fileExtension": "elm"
+			"fileExtension": "elm",
+			"shouldRunCacheBuster": 0
 			}
 		],
 	"overrideExternalServerCSS": 0,

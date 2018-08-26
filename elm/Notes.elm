@@ -1,27 +1,27 @@
-module Notes
-    exposing
-        ( Note
-        , Octave
-        , OctaveRange
-        , Mode
-        , scaleMode
-        , chordMode
-        , chord
-        , scale
-        , midiNoteNumberToNoteAndOctave
-        , midiNoteNumberToString
-        , noteAndOctaveToMidiNoteNumber
-        , noteNames
-        , formulaNames
-        )
+module Notes exposing
+    ( Mode
+    , Note
+    , Octave
+    , OctaveRange
+    , chord
+    , chordMode
+    , formulaNames
+    , midiNoteNumberToNoteAndOctave
+    , midiNoteNumberToString
+    , noteAndOctaveToMidiNoteNumber
+    , noteNames
+    , scale
+    , scaleMode
+    )
 
-import WesternMusicData exposing (..)
 import Array
     exposing
         ( Array
         , fromList
         , get
         )
+import String exposing (fromInt)
+import WesternMusicData exposing (..)
 
 
 type alias Mode =
@@ -72,12 +72,11 @@ chordMode =
     "Chord"
 
 
-{-|
-
-Looks for a Tuple in the List "list" whose first value is "name" and if found,
+{-| Looks for a Tuple in the List "list" whose first value is "name" and if found,
 returns the corresponding second value"
 
     formula chordFormulaPool major
+
 -}
 formula : List Formula -> FormulaName -> Maybe (List Int)
 formula list name =
@@ -88,13 +87,16 @@ formula list name =
         ( x, f ) :: xs ->
             if x == name then
                 Just f
+
             else
                 formula xs name
 
 
 {-|
+
     All the names of a collection of formulas
     ie: All Chord names or all Scale names
+
 -}
 formulaNames : List Formula -> List FormulaName
 formulaNames l =
@@ -114,14 +116,16 @@ indexInList list el base =
         x :: xs ->
             if x == el then
                 Just base
+
             else
                 indexInList xs el (base + 1)
 
 
 {-| extract the first element and put it at the end of the list "times" times
- Note that the list parameter is second (last) parameter  so we can use the pipe operator
+Note that the list parameter is second (last) parameter so we can use the pipe operator
 
-    rotateR 3 [0,1 2 3,4,5] == [3,4,5,0,1,2]
+    rotateR 3 [ 0, 1 2 3, 4, 5 ] == [ 3, 4, 5, 0, 1, 2 ]
+
 -}
 rotateR : Int -> List a -> List a
 rotateR times list =
@@ -154,12 +158,13 @@ noteAndOctaveToMidiNoteNumber note octave =
         Just nn ->
             let
                 noteNumber =
-                    (nn + (12 * (octave + 1)))
+                    nn + (12 * (octave + 1))
             in
-                if noteNumber < 0 || noteNumber > 127 then
-                    Nothing
-                else
-                    Just noteNumber
+            if noteNumber < 0 || noteNumber > 127 then
+                Nothing
+
+            else
+                Just noteNumber
 
 
 midiNoteNumberToString : Int -> String
@@ -168,7 +173,7 @@ midiNoteNumberToString noteNumber =
         ( n, o ) =
             midiNoteNumberToNoteAndOctave noteNumber
     in
-        n ++ toString o
+    n ++ String.fromInt o
 
 
 midiNoteNumberToNoteAndOctave : Int -> ( Note, Octave )
@@ -178,9 +183,9 @@ midiNoteNumberToNoteAndOctave noteNumber =
             noteNumber // 12
 
         n =
-            noteNumber % 12
+            modBy 12 noteNumber
     in
-        ( Maybe.withDefault " " (get n noteArray), o - 1 )
+    ( Maybe.withDefault " " (get n noteArray), o - 1 )
 
 
 
@@ -198,9 +203,10 @@ removeAdjacentDuplicates ls =
 
         x :: y :: xs ->
             if x == y then
-                x :: (removeAdjacentDuplicates xs)
+                x :: removeAdjacentDuplicates xs
+
             else
-                x :: (removeAdjacentDuplicates (y :: xs))
+                x :: removeAdjacentDuplicates (y :: xs)
 
 
 expandCollection : Mode -> Int -> List Int -> List Int
@@ -211,13 +217,13 @@ expandCollection mode times l =
         r =
             List.range 1 times
     in
-        r
-            |> List.map
-                (\i ->
-                    l
-                        |> List.map (\x -> x + (12 * (i - 1)))
-                )
-            |> List.concat
+    r
+        |> List.map
+            (\i ->
+                l
+                    |> List.map (\x -> x + (12 * (i - 1)))
+            )
+        |> List.concat
 
 
 noteCollection : Mode -> List Formula -> Note -> Octave -> FormulaName -> OctaveRange -> Bool -> NoteCollection
@@ -229,17 +235,17 @@ noteCollection mode collectionType root octave formulaName octaveRange dedup =
         fml =
             Maybe.withDefault [] (formula collectionType formulaName)
     in
-        case dedup of
-            False ->
-                fml
-                    |> List.map (\x -> x + mnn)
-                    |> expandCollection mode octaveRange
+    case dedup of
+        False ->
+            fml
+                |> List.map (\x -> x + mnn)
+                |> expandCollection mode octaveRange
 
-            True ->
-                fml
-                    |> List.map (\x -> x + mnn)
-                    |> expandCollection mode octaveRange
-                    |> removeAdjacentDuplicates
+        True ->
+            fml
+                |> List.map (\x -> x + mnn)
+                |> expandCollection mode octaveRange
+                |> removeAdjacentDuplicates
 
 
 chordCollection : Note -> Octave -> FormulaName -> OctaveRange -> Bool -> NoteCollection

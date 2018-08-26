@@ -1,6 +1,7 @@
-module Fingering exposing (..)
+module Fingering exposing (fingering)
 
 import WesternMusicData exposing (NoteCollection)
+
 
 
 {- Takes a List of open Strings as MIDI NOte Number.
@@ -26,6 +27,7 @@ fingering openStrings validNotes fretCount =
                         (\i ->
                             if List.member (s + i) validNotes then
                                 s + i
+
                             else
                                 -1
                         )
