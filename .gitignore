@@ -1,0 +1,11 @@
+# elm-package generated files
+elm-stuff
+# elm-repl generated files
+repl-temp-*
+# config.codekit3
+# config.codekit
+README.html
+js
+.sass-cache
+lib/min/
+zings

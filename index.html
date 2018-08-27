@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Fretboard App</title>
+    <meta name="description" content="Fretboard app - Chords, Scales and Fingerings for Stringed Instruments. Written in Elm">
+    <meta name="author" content="Frederic Cormier">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+
+                <div id="elm-app"></div>
+
+            </div>
+        </div>
+    </div>
+    <div class='footer'>
+        <div class='footerContent'>
+            ©Frédéric Cormier 2017 <a href="http://www.github.com/fredericcormier">- Fork Me On Github </a> - Written in <strong>Elm</strong> - <a href="http://elm-lang.org">www.elm-lang.org</a>
+        </div>
+    </div>
+
+
+    <script src="lib/tone.min.js"></script>
+    <script src="lib/logger.min.js"></script>
+    <script src="lib/fbaudio.js"></script>
+    <script src="js/Main-min.js"></script>
+
+    <script>
+        Logger.useDefaults();
+
+
+        var app = Elm.Main.init({
+              node: document.getElementById('elm-app'),
+              flags: "nevermind"
+        });
+
+        var fba = new FBAudio;
+
+        app.ports.audioStart.subscribe(function(nevermind) {
+            fba.start();
+        });
+
+        app.ports.audioStop.subscribe(function(nevermind) {
+            fba.stop();
+        });
+
+        app.ports.notesChanged.subscribe(function(nl) {
+            // Logger.debug(nl);
+            fba.notesHaveChanged(nl);
+        })
+
+        app.ports.bpmChanged.subscribe(function(newBPM) {
+            Tone.Transport.bpm.value = newBPM;
+        });
+    </script>
+</body>
+
+</html>

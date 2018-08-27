@@ -1,0 +1,123 @@
+body {
+  line-height: 1.5;
+  color: #666;
+  margin: 0 0 50px; }
+
+a:link, a:visited, a:active {
+  font-weight: bold;
+  color: #658080;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+/*Matrix*/
+div.centered-wrapper {
+  text-align: center;
+  background-color: #ffffff;
+  width: 960px; }
+
+.inline-block {
+  display: inline-block; }
+
+div.matrix {
+  text-align: center;
+  margin: 5px;
+  overflow: hidden;
+  max-width: 850px; }
+
+div#fretboard {
+  margin-top: 5px; }
+
+div.cell {
+  float: left;
+  min-width: 20px;
+  padding: 4px;
+  background-color: #eee;
+  border-color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  cursor: pointer; }
+
+div.cell.mode {
+  margin-top: 10px; }
+
+div.cell.formula {
+  font-size: 13px;
+  width: 160px; }
+
+div.cell.mode {
+  width: 150px;
+  font-size: 20px; }
+
+div.cell.formula:hover,
+div.cell.note:hover,
+div.cell.octave:hover {
+  background-color: #A9B7C0;
+  color: white;
+  opacity: 0.75; }
+
+div.matrix div.cell-selected {
+  background-color: #658080;
+  color: white; }
+
+div.matrix div.cell-selected:hover {
+  background-color: #658080;
+  opacity: 1.0;
+  color: white; }
+
+div.cell.result {
+  background-color: #658080;
+  color: white;
+  padding: 0 5px 0 5px; }
+
+/*End Matrix*/
+.select-wrapper {
+  width: 85%;
+  margin: 0 auto; }
+
+select {
+  height: 28px;
+  font-size: 13px;
+  outline: none;
+  margin-right: 20px;
+  margin-left: 5px; }
+
+div.select-row {
+  width: 850px;
+  display: inline-block; }
+
+div.select-cell {
+  float: left;
+  margin-top: 20px; }
+
+div.select-cell-caption {
+  float: left;
+  padding-top: 1px;
+  margin-top: 20px; }
+
+.footer {
+  min-width: 850px;
+  background-color: white;
+  border-top: #eee solid 1px;
+  text-align: center;
+  font-size: 13px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: -1;
+  height: 10px;
+  width: 100%;
+  padding-bottom: 30px; }
+
+.footerContent {
+  width: 960px;
+  margin: 15px auto 10px auto; }
+
+#audio-banner {
+  max-width: 860px;
+  margin: auto;
+  padding-top: 10px; }
+  #audio-banner button {
+    background-color: white; }
