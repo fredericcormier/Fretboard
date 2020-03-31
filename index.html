@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Fretboard App</title>
-    <meta name="description" content="Fretboard app - Chords, Scales and Fingerings for Stringed Instruments. Written in Elm">
+    <meta name="description"
+        content="Fretboard app - Chords, Scales and Fingerings for Stringed Instruments. Written in Elm">
     <meta name="author" content="Frederic Cormier">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
@@ -26,7 +27,8 @@
     </div>
     <div class='footer'>
         <div class='footerContent'>
-            ©Frédéric Cormier 2017 <a href="http://www.github.com/fredericcormier">- Fork Me On Github </a> - Written in <strong>Elm</strong> - <a href="http://elm-lang.org">www.elm-lang.org</a>
+            ©Frédéric Cormier 2017 <a href="http://www.github.com/fredericcormier">- Fork Me On Github </a> - Written in
+            <strong>Elm</strong> - <a href="http://elm-lang.org">www.elm-lang.org</a>
         </div>
     </div>
 
@@ -37,30 +39,32 @@
     <script src="js/Main-min.js"></script>
 
     <script>
-        Logger.useDefaults();
-
+        // Logger.useDefaults();
 
         var app = Elm.Main.init({
-              node: document.getElementById('elm-app'),
-              flags: "nevermind"
+            node: document.getElementById('elm-app'),
+            flags: "nevermind"
         });
-
+        var context = new AudioContext();
         var fba = new FBAudio;
 
-        app.ports.audioStart.subscribe(function(nevermind) {
+        app.ports.audioStart.subscribe(function (nevermind) {
+            context.resume().then(() => {
+                console.log('Playback resumed successfully');
+            });
             fba.start();
         });
 
-        app.ports.audioStop.subscribe(function(nevermind) {
+        app.ports.audioStop.subscribe(function (nevermind) {
             fba.stop();
         });
 
-        app.ports.notesChanged.subscribe(function(nl) {
+        app.ports.notesChanged.subscribe(function (nl) {
             // Logger.debug(nl);
             fba.notesHaveChanged(nl);
         })
 
-        app.ports.bpmChanged.subscribe(function(newBPM) {
+        app.ports.bpmChanged.subscribe(function (newBPM) {
             Tone.Transport.bpm.value = newBPM;
         });
     </script>
