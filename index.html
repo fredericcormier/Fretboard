@@ -47,7 +47,8 @@
         var fba = new FBAudio;
 
         app.ports.audioStart.subscribe(function (nevermind) {
-            new AudioContext().resume().then(() => {
+            var ac = new AudioContext();
+            ac.resume().then(() => {
                 console.log('Playback resumed successfully');
             });
             fba.start();
