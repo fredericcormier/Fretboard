@@ -39,6 +39,13 @@
     <script src="js/Main-min.js"></script>
 
     <script>
+        document.documentElement.addEventListener(
+            "mousedown", function () {
+                mouse_IsDown = true;
+                if (Tone.context.state !== 'running') {
+                    Tone.context.resume();
+                }
+            })
 
         var app = Elm.Main.init({
             node: document.getElementById('elm-app'),
@@ -47,10 +54,6 @@
         var fba = new FBAudio;
 
         app.ports.audioStart.subscribe(function (nevermind) {
-            var ac = new AudioContext();
-            ac.resume().then(() => {
-                console.log('Playback resumed successfully');
-            });
             fba.start();
         });
 
