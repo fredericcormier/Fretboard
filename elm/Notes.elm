@@ -151,20 +151,34 @@ rotateR times list =
 
 noteAndOctaveToMidiNoteNumber : Note -> Octave -> Maybe Int
 noteAndOctaveToMidiNoteNumber note octave =
-    case indexInList noteNames (String.toUpper note) 0 of
-        Nothing ->
-            Nothing
+    indexInList noteNames (String.toUpper note) 0
+        |> Maybe.andThen
+            (\nn ->
+                let
+                    noteNumber =
+                        nn + (12 * (octave + 1))
+                in
+                if noteNumber < 0 || noteNumber > 127 then
+                    Nothing
 
-        Just nn ->
-            let
-                noteNumber =
-                    nn + (12 * (octave + 1))
-            in
-            if noteNumber < 0 || noteNumber > 127 then
-                Nothing
+                else
+                    Just noteNumber
+            )
 
-            else
-                Just noteNumber
+
+
+-- case indexInList noteNames (String.toUpper note) 0 of
+--     Nothing ->
+--         Nothing
+--     Just nn ->
+--         let
+--             noteNumber =
+--                 nn + (12 * (octave + 1))
+--         in
+--         if noteNumber < 0 || noteNumber > 127 then
+--             Nothing
+--         else
+--             Just noteNumber
 
 
 midiNoteNumberToString : Int -> String
@@ -209,8 +223,8 @@ removeAdjacentDuplicates ls =
                 x :: removeAdjacentDuplicates (y :: xs)
 
 
-expandCollection : Mode -> Int -> List Int -> List Int
-expandCollection mode times l =
+expandCollection : Int -> List Int -> List Int
+expandCollection times l =
     -- mode is either scaleMode or chordMode
     -- what should we do in chordMode ???
     let
@@ -226,8 +240,8 @@ expandCollection mode times l =
         |> List.concat
 
 
-noteCollection : Mode -> List Formula -> Note -> Octave -> FormulaName -> OctaveRange -> Bool -> NoteCollection
-noteCollection mode collectionType root octave formulaName octaveRange dedup =
+noteCollection : List Formula -> Note -> Octave -> FormulaName -> OctaveRange -> Bool -> NoteCollection
+noteCollection collectionType root octave formulaName octaveRange dedup =
     let
         mnn =
             Maybe.withDefault 0 (noteAndOctaveToMidiNoteNumber root octave)
@@ -238,23 +252,23 @@ noteCollection mode collectionType root octave formulaName octaveRange dedup =
     if dedup == False then
         fml
             |> List.map (\x -> x + mnn)
-            |> expandCollection mode octaveRange
+            |> expandCollection octaveRange
 
     else
         fml
             |> List.map (\x -> x + mnn)
-            |> expandCollection mode octaveRange
+            |> expandCollection octaveRange
             |> removeAdjacentDuplicates
 
 
 chordCollection : Note -> Octave -> FormulaName -> OctaveRange -> Bool -> NoteCollection
 chordCollection =
-    noteCollection chordMode chordFormulaPool
+    noteCollection chordFormulaPool
 
 
 scaleCollection : Note -> Octave -> FormulaName -> OctaveRange -> Bool -> NoteCollection
 scaleCollection =
-    noteCollection scaleMode scaleFormulaPool
+    noteCollection scaleFormulaPool
 
 
 chord : Note -> Octave -> FormulaName -> OctaveRange -> Bool -> Int -> NoteCollection

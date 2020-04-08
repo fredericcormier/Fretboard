@@ -62,7 +62,7 @@ type alias Model =
 
 
 init : Maybe String -> ( Model, Cmd Msg )
-init s =
+init _ =
     let
         initialModel =
             { mode = scaleMode
@@ -83,7 +83,7 @@ init s =
 
 
 subscriptions : Model -> Sub Msg
-subscriptions model =
+subscriptions _ =
     Sub.none
 
 
@@ -238,12 +238,11 @@ choiceToBool s =
 
 boolToChoice : Bool -> String
 boolToChoice b =
-    case b of
-        True ->
-            "Yes"
+    if b == True then
+        "Yes"
 
-        False ->
-            "No"
+    else
+        "No"
 
 
 stringToOption : String -> Html Msg
@@ -437,8 +436,8 @@ resultMatrixDiv model =
         )
 
 
-instrumentSelect : Model -> Html Msg
-instrumentSelect model =
+instrumentSelect : Html Msg
+instrumentSelect =
     div [ class "select-cell" ]
         [ select [ onInput TuningChanged, name "Intrument", class "soflow" ]
             (tuningNames |> List.map stringToOption)
@@ -454,8 +453,8 @@ octaveRangeSelect model =
         ]
 
 
-arpeggioPatternsSelect : Model -> Html Msg
-arpeggioPatternsSelect model =
+arpeggioPatternsSelect : Html Msg
+arpeggioPatternsSelect =
     div [ class "select-cell" ]
         [ select [ onInput ArpeggioPatternChanged, name "Pattern", class "soflow" ]
             (arpeggioPatterns |> List.map stringToOption)
@@ -475,11 +474,11 @@ fretboardSelectionDiv model =
     div [ class "select-wrapper" ]
         [ div [ class "select-row" ]
             [ div [ class "select-cell-caption" ] [ text "Tuning :" ]
-            , instrumentSelect model
+            , instrumentSelect
             , div [ class "select-cell-caption" ] [ text "Octave Range :" ]
             , octaveRangeSelect model
             , div [ class "select-cell-caption" ] [ text "Pattern :" ]
-            , arpeggioPatternsSelect model
+            , arpeggioPatternsSelect
             , div [ class "select-cell-caption" ] [ text "Double Root :" ]
             , doubleRootSelect model
             ]

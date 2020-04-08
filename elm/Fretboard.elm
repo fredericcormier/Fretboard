@@ -60,8 +60,8 @@ renderBoard board =
 -- FRET NUMBERS
 
 
-renderFretSideDotArea : Board -> Svg msg
-renderFretSideDotArea board =
+renderFretSideDotArea : Svg msg
+renderFretSideDotArea =
     rect
         [ fill fbBoardFretNumberAreaFill
         , stroke fbBoardStroke
@@ -453,7 +453,7 @@ render instrumentName noteCollection =
                                                         [ shadowfilter
                                                         , renderBoard board
                                                         , renderNut board
-                                                        , renderFretSideDotArea board
+                                                        , renderFretSideDotArea
                                                         ]
                                                 )
                                         )

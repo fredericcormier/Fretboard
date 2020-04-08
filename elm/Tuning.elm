@@ -57,7 +57,7 @@ type alias Gauge =
 tuningNames : List TuningName
 tuningNames =
     tuningPool
-        |> List.map (\( n, t, g ) -> n)
+        |> List.map (\( n, _, _ ) -> n)
 
 
 
@@ -72,7 +72,7 @@ strings l name =
         [] ->
             []
 
-        ( n, t, g ) :: xs ->
+        ( n, t, _ ) :: xs ->
             if n == name then
                 t
 
@@ -86,7 +86,7 @@ gauges l name =
         [] ->
             []
 
-        ( n, t, g ) :: xs ->
+        ( n, _, g ) :: xs ->
             if n == name then
                 g
 
