@@ -1,4 +1,40 @@
-port module Main exposing (Model, Msg(..), arpeggioPatterns, arpeggioPatternsSelect, audioBannerDiv, audioStart, audioStop, boolToChoice, boolToOption, bpmChanged, cellOfString, choiceToBool, doubleRootChoices, doubleRootSelect, formulaMatrixDiv, fretboardDiv, fretboardSelectionDiv, init, instrumentSelect, intToOption, main, matrixOfStrings, modeMatrixDiv, noteMatrixDiv, notesChanged, notesForAudio, notesForModelState, octaveMatrixDiv, octaveRangeSelect, resultMatrixDiv, selectionH1, stringToOption, subscriptions, update, view)
+port module Main exposing
+    ( Model
+    , Msg(..)
+    , arpeggioPatterns
+    , arpeggioPatternsSelect
+    , audioBannerDiv
+    , audioStart
+    , audioStop
+    , boolToChoice
+    , boolToOption
+    , bpmChanged
+    , cellOfString
+    , choiceToBool
+    , doubleRootChoices
+    , doubleRootSelect
+    , formulaMatrixDiv
+    , fretboardDiv
+    , fretboardSelectionDiv
+    , init
+    , instrumentSelect
+    , intToOption
+    , main
+    , matrixOfStrings
+    , modeMatrixDiv
+    , noteMatrixDiv
+    , notesChanged
+    , notesForAudio
+    , notesForModelState
+    , octaveMatrixDiv
+    , octaveRangeSelect
+    , resultMatrixDiv
+    , selectionH1
+    , stringToOption
+    , subscriptions
+    , update
+    , view
+    )
 
 import Browser exposing (element)
 import Fretboard exposing (render)
