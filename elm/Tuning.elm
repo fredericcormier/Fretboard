@@ -9,18 +9,22 @@ module Tuning exposing
     )
 
 
+stringGaugeThin : number
 stringGaugeThin =
     1
 
 
+stringGaugeMedium : number
 stringGaugeMedium =
     2
 
 
+stringGaugeThick : number
 stringGaugeThick =
     3
 
 
+stringGaugeBig : number
 stringGaugeBig =
     5
 

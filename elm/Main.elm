@@ -1,13 +1,57 @@
 port module Main exposing (Model, Msg(..), arpeggioPatterns, arpeggioPatternsSelect, audioBannerDiv, audioStart, audioStop, boolToChoice, boolToOption, bpmChanged, cellOfString, choiceToBool, doubleRootChoices, doubleRootSelect, formulaMatrixDiv, fretboardDiv, fretboardSelectionDiv, init, instrumentSelect, intToOption, main, matrixOfStrings, modeMatrixDiv, noteMatrixDiv, notesChanged, notesForAudio, notesForModelState, octaveMatrixDiv, octaveRangeSelect, resultMatrixDiv, selectionH1, stringToOption, subscriptions, update, view)
 
-import Browser exposing (..)
-import Fretboard exposing (..)
-import Html exposing (..)
-import Html.Attributes exposing (..)
+import Browser exposing (element)
+import Fretboard exposing (render)
+import Html
+    exposing
+        ( Html
+        , button
+        , div
+        , h1
+        , input
+        , option
+        , select
+        , span
+        , text
+        )
+import Html.Attributes
+    exposing
+        ( class
+        , classList
+        , id
+        , name
+        , selected
+        , type_
+        , value
+        )
 import Html.Events exposing (onClick, onInput)
-import Notes exposing (..)
-import Tuning exposing (..)
-import WesternMusicData exposing (..)
+import Notes
+    exposing
+        ( Mode
+        , Note
+        , Octave
+        , OctaveRange
+        , chord
+        , chordMode
+        , formulaNames
+        , midiNoteNumberToString
+        , noteNames
+        , scale
+        , scaleMode
+        )
+import Tuning
+    exposing
+        ( TuningName
+        , tuningNames
+        )
+import WesternMusicData
+    exposing
+        ( FormulaName
+        , chordFormulaPool
+        , ionian
+        , major
+        , scaleFormulaPool
+        )
 
 
 main : Program (Maybe String) Model Msg

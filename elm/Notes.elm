@@ -21,7 +21,88 @@ import Array
         , get
         )
 import String exposing (fromInt)
-import WesternMusicData exposing (..)
+import WesternMusicData
+    exposing
+        ( Formula
+        , FormulaName
+        , NoteCollection
+        , aeolian
+        , alteredScale
+        , arabian
+        , augmented
+        , augmented7
+        , balinese
+        , bluesScale
+        , byzantine
+        , chordFormulaPool
+        , chromatic
+        , diminished
+        , diminished7
+        , diminishedHalfWhole
+        , diminishedWholeHalf
+        , dominant7
+        , dorian
+        , dorianBebop
+        , doubleHarmonic
+        , eastIndianPurvi
+        , eightToneSpanish
+        , eleventh
+        , enigmatic
+        , gagakuRittsuSenPou
+        , gagakuRyoSenPou
+        , gypsyMinor
+        , halfDiminished7
+        , harmonicMajor
+        , harmonicMinor
+        , hungarianGypsy
+        , hungarianMajor
+        , hungarianMinor
+        , inSenPou
+        , ionian
+        , leadingWholeTone
+        , locrian
+        , lydian
+        , lydianMinor
+        , major
+        , major11
+        , major13
+        , major6
+        , major69
+        , major7
+        , major9
+        , majorBebop
+        , majorLocrian
+        , majorPentatonic
+        , melodicMinor
+        , minor
+        , minor11
+        , minor13
+        , minor6
+        , minor69
+        , minor7
+        , minor9
+        , minorMajor
+        , minorPentatonic
+        , mixolydian
+        , mixolydianBebop
+        , naturalMinor
+        , neapolitanMajor
+        , neapolitanMinor
+        , ninth
+        , okinawa
+        , oriental
+        , overtone
+        , persian
+        , phrygian
+        , prometheus
+        , scaleFormulaPool
+        , seventhSus4
+        , sixToneSymmetrical
+        , sus4
+        , thirteenth
+        , wholeTone
+        , zokugakuYoSenPou
+        )
 
 
 type alias Mode =

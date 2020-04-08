@@ -1,4 +1,38 @@
-module FretboardConstants exposing (fbBoardFill, fbBoardFretNumberAreaFill, fbBoardFretNumberColor, fbBoardOffsetX, fbBoardOffsetY, fbBoardStroke, fbBoardStrokeWidth, fbBoardWidth, fbBoardfretNumberHeight, fbDoubleInlayRadius, fbFingeringCircleStrokeColorNormal, fbFingeringCircleStrokeColorRootNote, fbFingeringFillColorNormal, fbFingeringFillColorRootNote, fbFingeringRadius, fbFingeringTextColorLight, fbFingeringTextColorNormal, fbFingeringTextColorRootNote, fbFretOffset, fbFretStroke, fbFretStrokeWidth, fbInlayFillColor, fbNutStrokeColor, fbRootFingerGreenColor, fbSingleInlayRadius, fbStringColor, fbStringOffset, fbStringSpacing, fbStringStart, fbStringStrokeBig, fbStringStrokeMedium, fbStringStrokeThick, fbStringStrokeThin)
+module FretboardConstants exposing
+    ( fbBoardFill
+    , fbBoardFretNumberAreaFill
+    , fbBoardFretNumberColor
+    , fbBoardOffsetX
+    , fbBoardOffsetY
+    , fbBoardStroke
+    , fbBoardStrokeWidth
+    , fbBoardWidth
+    , fbBoardfretNumberHeight
+    , fbDoubleInlayRadius
+    , fbFingeringCircleStrokeColorNormal
+    , fbFingeringCircleStrokeColorRootNote
+    , fbFingeringFillColorNormal
+    , fbFingeringFillColorRootNote
+    , fbFingeringRadius
+    , fbFingeringTextColorLight
+    , fbFingeringTextColorNormal
+    , fbFingeringTextColorRootNote
+    , fbFretOffset
+    , fbFretStroke
+    , fbFretStrokeWidth
+    , fbInlayFillColor
+    , fbNutStrokeColor
+    , fbRootFingerGreenColor
+    , fbSingleInlayRadius
+    , fbStringColor
+    , fbStringOffset
+    , fbStringSpacing
+    , fbStringStart
+    , fbStringStrokeBig
+    , fbStringStrokeMedium
+    , fbStringStrokeThick
+    , fbStringStrokeThin
+    )
 
 -- renderBoard
 

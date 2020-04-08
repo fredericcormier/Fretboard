@@ -1,15 +1,86 @@
 module Fretboard exposing (render)
 
 import Fingering exposing (fingering)
-import FretboardConstants exposing (..)
+import FretboardConstants
+    exposing
+        ( fbBoardFill
+        , fbBoardFretNumberAreaFill
+        , fbBoardFretNumberColor
+        , fbBoardOffsetX
+        , fbBoardOffsetY
+        , fbBoardStroke
+        , fbBoardStrokeWidth
+        , fbBoardWidth
+        , fbBoardfretNumberHeight
+        , fbDoubleInlayRadius
+        , fbFingeringCircleStrokeColorNormal
+        , fbFingeringFillColorNormal
+        , fbFingeringFillColorRootNote
+        , fbFingeringRadius
+        , fbFingeringTextColorLight
+        , fbFingeringTextColorNormal
+        , fbFretStroke
+        , fbInlayFillColor
+        , fbNutStrokeColor
+        , fbSingleInlayRadius
+        , fbStringColor
+        , fbStringOffset
+        , fbStringSpacing
+        )
 import Notes
     exposing
         ( midiNoteNumberToNoteAndOctave
         , noteAndOctaveToMidiNoteNumber
         )
-import Svg exposing (..)
-import Svg.Attributes exposing (..)
-import Tuning exposing (..)
+import Svg
+    exposing
+        ( Svg
+        , circle
+        , feBlend
+        , feGaussianBlur
+        , feOffset
+        , line
+        , rect
+        , svg
+        , text
+        , text_
+        )
+import Svg.Attributes
+    exposing
+        ( cx
+        , cy
+        , dx
+        , dy
+        , fill
+        , fontSize
+        , fontWeight
+        , height
+        , id
+        , in2
+        , in_
+        , mode
+        , r
+        , result
+        , stdDeviation
+        , stroke
+        , strokeWidth
+        , textAnchor
+        , viewBox
+        , width
+        , x
+        , x1
+        , x2
+        , y
+        , y1
+        , y2
+        )
+import Tuning
+    exposing
+        ( IString
+        , gauges
+        , strings
+        , tuningPool
+        )
 import WesternMusicData exposing (NoteCollection)
 
 
