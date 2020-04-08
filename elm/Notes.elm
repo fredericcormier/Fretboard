@@ -235,17 +235,16 @@ noteCollection mode collectionType root octave formulaName octaveRange dedup =
         fml =
             Maybe.withDefault [] (formula collectionType formulaName)
     in
-    case dedup of
-        False ->
-            fml
-                |> List.map (\x -> x + mnn)
-                |> expandCollection mode octaveRange
+    if dedup == False then
+        fml
+            |> List.map (\x -> x + mnn)
+            |> expandCollection mode octaveRange
 
-        True ->
-            fml
-                |> List.map (\x -> x + mnn)
-                |> expandCollection mode octaveRange
-                |> removeAdjacentDuplicates
+    else
+        fml
+            |> List.map (\x -> x + mnn)
+            |> expandCollection mode octaveRange
+            |> removeAdjacentDuplicates
 
 
 chordCollection : Note -> Octave -> FormulaName -> OctaveRange -> Bool -> NoteCollection

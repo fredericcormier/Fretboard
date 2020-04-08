@@ -185,16 +185,15 @@ update msg model =
             )
 
         ToggleAudio ->
-            case model.audioPlaying of
-                True ->
-                    ( { model | audioPlaying = False }
-                    , audioStop "nevermind"
-                    )
+            if model.audioPlaying == True then
+                ( { model | audioPlaying = False }
+                , audioStop "nevermind"
+                )
 
-                False ->
-                    ( { model | audioPlaying = True }
-                    , audioStart "nevermind"
-                    )
+            else
+                ( { model | audioPlaying = True }
+                , audioStart "nevermind"
+                )
 
         ArpeggioPatternChanged p ->
             let
