@@ -121,9 +121,14 @@ arpeggioPatterns =
     [ "Up"
     , "Down"
     , "Up And Down"
-    , "The Back Thing"
-    , "The Spider Thing"
-    , "Random"
+    , "Next Three Up"
+    , "Next Three Down"
+    , "Next Three Up And Down"
+    , "Thirds Up"
+    , "Thirds Down"
+    , "Thirds Up And Down"
+    , "Even"
+    , "Odd"
     ]
 
 
@@ -154,7 +159,7 @@ init _ =
             , audioPlaying = False
             , arpeggioPatterns = "Up"
             , bpm = 120
-            , rootNoteDouble = True
+            , rootNoteDouble = False
             }
     in
     ( initialModel
@@ -448,6 +453,58 @@ formulaMatrixDiv model =
             (matrixOfStrings "Formula" (formulaNames scaleFormulaPool) model.formulaName)
 
 
+nextThreeUp : List int -> List int
+nextThreeUp l =
+    case l of
+        [] ->
+            []
+
+        x :: x1 :: x2 :: x3 :: xs ->
+            x :: x1 :: x2 :: x3 :: nextThreeUp (x1 :: x2 :: x3 :: xs)
+
+        _ ->
+            []
+
+
+thirdsUp : List int -> List int
+thirdsUp l =
+    case l of
+        [] ->
+            []
+
+        x :: x1 :: x2 :: x3 :: xs ->
+            x :: x3 :: thirdsUp (x1 :: x2 :: x3 :: xs)
+
+        _ ->
+            []
+
+
+even : List int -> List int
+even l =
+    case l of
+        [] ->
+            []
+
+        x :: x1 :: x2 :: x3 :: x4 :: xs ->
+            x2 :: x4 :: x :: even (x1 :: x2 :: x3 :: x4 :: xs)
+
+        _ ->
+            []
+
+
+odd : List int -> List int
+odd l =
+    case l of
+        [] ->
+            []
+
+        x :: x1 :: x2 :: x3 :: x4 :: x5 :: xs ->
+            x3 :: x5 :: x :: odd (x1 :: x2 :: x3 :: x4 :: xs)
+
+        _ ->
+            []
+
+
 notesForAudio : Model -> List String
 notesForAudio model =
     let
@@ -464,6 +521,30 @@ notesForAudio model =
         "Up And Down" ->
             -- List.reverse notes |> List.append notes
             notes ++ List.reverse notes
+
+        "Next Three Up" ->
+            nextThreeUp notes
+
+        "Next Three Down" ->
+            List.reverse (nextThreeUp notes)
+
+        "Next Three Up And Down" ->
+            nextThreeUp notes ++ List.reverse (nextThreeUp notes)
+
+        "Thirds Up" ->
+            thirdsUp notes
+
+        "Thirds Down" ->
+            List.reverse (thirdsUp notes)
+
+        "Thirds Up And Down" ->
+            thirdsUp notes ++ List.reverse (thirdsUp notes)
+
+        "Even" ->
+            even notes
+
+        "Odd" ->
+            odd notes
 
         _ ->
             notes
