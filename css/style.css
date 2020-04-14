@@ -3,7 +3,9 @@ body {
   color: #666;
   margin: 0 0 50px; }
 
-a:link, a:visited, a:active {
+a:link,
+a:visited,
+a:active {
   font-weight: bold;
   color: #658080;
   text-decoration: none; }
@@ -74,28 +76,41 @@ div.cell.result {
 
 /*End Matrix*/
 .select-wrapper {
-  width: 85%;
+  width: 100%;
   margin: 0 auto; }
 
 select {
-  height: 28px;
-  font-size: 13px;
-  outline: none;
-  margin-right: 20px;
-  margin-left: 5px; }
+  width: 200px;
+  padding: 5px;
+  font-size: 15px;
+  line-height: 1;
+  border: 0;
+  border-radius: 5px;
+  height: 34px;
+  background: url(../img/down-arrow.png) no-repeat right #ddd;
+  -webkit-appearance: none;
+  padding: 6px 10px;
+  color: white;
+  background-color: #658080;
+  background-position-x: 180px; }
+
+select:focus {
+  border-color: white; }
 
 div.select-row {
+  padding-left: 0px;
   width: 850px;
   display: inline-block; }
 
-div.select-cell {
-  float: left;
-  margin-top: 20px; }
-
 div.select-cell-caption {
+  width: 25%;
+  text-align: left;
   float: left;
   padding-top: 1px;
   margin-top: 20px; }
+
+select-cell-caption text {
+  text-indent: 50px; }
 
 .footer {
   min-width: 850px;

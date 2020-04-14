@@ -37,6 +37,7 @@ port module Main exposing
     )
 
 import Browser exposing (element)
+import Exts.Html exposing (nbsp)
 import Fretboard exposing (render)
 import Html
     exposing
@@ -634,14 +635,10 @@ fretboardSelectionDiv : Model -> Html Msg
 fretboardSelectionDiv model =
     div [ class "select-wrapper" ]
         [ div [ class "select-row" ]
-            [ div [ class "select-cell-caption" ] [ text "Tuning :" ]
-            , instrumentSelect
-            , div [ class "select-cell-caption" ] [ text "Octave Range :" ]
-            , octaveRangeSelect model
-            , div [ class "select-cell-caption" ] [ text "Pattern :" ]
-            , arpeggioPatternsSelect
-            , div [ class "select-cell-caption" ] [ text "Double Root :" ]
-            , doubleRootSelect model
+            [ div [ class "select-cell-caption" ] [ text (nbsp ++ nbsp ++ "Tuning :"), instrumentSelect ]
+            , div [ class "select-cell-caption" ] [ text (nbsp ++ nbsp ++ "Range :"), octaveRangeSelect model ]
+            , div [ class "select-cell-caption" ] [ text (nbsp ++ nbsp ++ "Pattern :"), arpeggioPatternsSelect ]
+            , div [ class "select-cell-caption" ] [ text (nbsp ++ nbsp ++ "Double Root :"), doubleRootSelect model ]
             ]
         ]
 
@@ -701,7 +698,7 @@ view model =
         , octaveMatrixDiv model
         , formulaMatrixDiv model
         , resultMatrixDiv model
-        , audioBannerDiv model
         , fretboardSelectionDiv model
+        , audioBannerDiv model
         , fretboardDiv model
         ]

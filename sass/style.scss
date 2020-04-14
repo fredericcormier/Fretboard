@@ -6,13 +6,18 @@ $LIGHT: #EFD9C1;
 $POWDER: #CCCBC6;
 $selectedCellColor: #658080;
 
+
+$selectedCellColorFade: #718d8d;
+
 body {
     line-height: 1.5;
     color: $devilColor;
     margin: 0 0 50px;
 }
 
-a:link , a:visited, a:active{
+a:link,
+a:visited,
+a:active {
     font-weight: bold;
     color: $selectedCellColor;
     text-decoration: none;
@@ -23,6 +28,7 @@ a:hover {
     text-decoration: underline;
 
 }
+
 /*Matrix*/
 div.centered-wrapper {
 
@@ -57,7 +63,8 @@ div.cell {
     text-align: center;
     cursor: pointer;
 }
-div.cell.mode{
+
+div.cell.mode {
     margin-top: 10px;
 }
 
@@ -66,8 +73,8 @@ div.cell.formula {
     width: 160px;
 }
 
-div.cell.mode{
-    width:150px;
+div.cell.mode {
+    width: 150px;
     font-size: 20px;
 }
 
@@ -92,7 +99,7 @@ div.matrix div.cell-selected:hover {
 }
 
 
-div.cell.result{
+div.cell.result {
     background-color: $selectedCellColor;
     color: white;
     padding: 0 5px 0 5px;
@@ -100,34 +107,90 @@ div.cell.result{
 
 /*End Matrix*/
 .select-wrapper {
-    width:85%;
+    width: 100%;
     margin: 0 auto;
 
 }
 
 select {
-    height: 28px;
-    font-size: 13px;
-    outline: none;
-    margin-right: 20px;
-    margin-left: 5px;
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    line-height: 1;
+    border: 0;
+    border-radius: 5px;
+    height: 34px;
+    // background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
+    background: url(../img/down-arrow.png) no-repeat right #ddd;
+
+    -webkit-appearance: none;
+    padding: 6px 10px;
+    color: white;
+    background-color: $selectedCellColor;
+    background-position-x: 180px;
 }
 
+// select {
+//     -webkit-appearance: none;
+//     height: 28px;
+//     width: 200px;
+//     font-size: 15px;
+//     color: white;
+//     outline: none;
+//     margin-right: 20px;
+//     margin-left: 5px;
+//     background-color: $selectedCellColor;
+//     height: 38px;
+//     padding: 6px 10px;
+
+//     box-shadow: none;
+//     box-sizing: border-box;
+//     background: url(../img/down-arrow.png) no-repeat 180px 18px
+// }
+
+
+
+select:hover {
+    // background-color: $GREYBLUE;
+    // border: 5px solid $selectedCellColor;
+    // border-color: rgb(104, 5, 5);
+}
+
+select:focus {
+    border-color: white;
+
+    // box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    // box-shadow: 0 0 0 3px -moz-mac-focusring;
+    // color: #222;
+    // outline: none;
+}
+
+
 div.select-row {
+    padding-left: 0px;
     width: 850px;
     display: inline-block;
 }
 
 div.select-cell {
-    float: left;
-    margin-top: 20px;
+
+    // float: left;
+    // margin-top: 20px;
 }
 
 
 div.select-cell-caption {
+    // background-color: red;
+    // text-indent: 50px;
+    width: 25%;
+    text-align: left;
     float: left;
     padding-top: 1px;
     margin-top: 20px;
+}
+
+select-cell-caption text {
+    text-indent: 50px;
 }
 
 .footer {
@@ -150,12 +213,13 @@ div.select-cell-caption {
     margin: 15px auto 10px auto;
 }
 
-#audio-banner{
+#audio-banner {
     max-width: 860px;
     margin: auto;
     // background-color: $selectedCellColor;
     padding-top: 10px;
-    button{
+
+    button {
         // float: left;
         background-color: white;
     }
