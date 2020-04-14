@@ -1,3 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko&display=swap");
+[type='range'] {
+  padding: 7px 0px 0px 0px;
+  -webkit-appearance: none;
+  background: transparent;
+  margin: 12px 0;
+  width: 400px; }
+  [type='range']::-moz-focus-outer {
+    border: 0; }
+  [type='range']:focus {
+    outline: 0; }
+    [type='range']:focus::-ms-fill-lower {
+      background: #eceff1; }
+    [type='range']:focus::-ms-fill-upper {
+      background: #fbfbfc; }
+  [type='range']::-webkit-slider-runnable-track {
+    cursor: default;
+    height: 10px;
+    transition: all .2s ease;
+    width: 400px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
+    background: #eceff1;
+    border: 2px solid #cfd8dc;
+    border-radius: 5px; }
+  [type='range']::-webkit-slider-thumb {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
+    background: #607d8b;
+    border: 2px solid #eceff1;
+    border-radius: 12px;
+    box-sizing: border-box;
+    cursor: default;
+    height: 24px;
+    width: 24px;
+    -webkit-appearance: none;
+    margin-top: -9px; }
+  [type='range']::-moz-range-track {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
+    cursor: default;
+    height: 10px;
+    transition: all .2s ease;
+    width: 400px;
+    background: #eceff1;
+    border: 2px solid #cfd8dc;
+    border-radius: 5px;
+    height: 5px; }
+  [type='range']::-moz-range-thumb {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
+    background: #607d8b;
+    border: 2px solid #eceff1;
+    border-radius: 12px;
+    box-sizing: border-box;
+    cursor: default;
+    height: 24px;
+    width: 24px; }
+  [type='range']::-ms-track {
+    cursor: default;
+    height: 10px;
+    transition: all .2s ease;
+    width: 400px;
+    background: transparent;
+    border-color: transparent;
+    border-width: 12px 0;
+    color: transparent; }
+  [type='range']::-ms-fill-lower {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
+    background: #dde3e6;
+    border: 2px solid #cfd8dc;
+    border-radius: 10px; }
+  [type='range']::-ms-fill-upper {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
+    background: #eceff1;
+    border: 2px solid #cfd8dc;
+    border-radius: 10px; }
+  [type='range']::-ms-thumb {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
+    background: #607d8b;
+    border: 2px solid #eceff1;
+    border-radius: 12px;
+    box-sizing: border-box;
+    cursor: default;
+    height: 24px;
+    width: 24px;
+    margin-top: 2.5px; }
+  [type='range']:disabled::-webkit-slider-thumb, [type='range']:disabled::-moz-range-thumb, [type='range']:disabled::-ms-thumb, [type='range']:disabled::-webkit-slider-runnable-track, [type='range']:disabled::-ms-fill-lower, [type='range']:disabled::-ms-fill-upper {
+    cursor: not-allowed; }
+
 body {
   line-height: 1.5;
   color: #666;
@@ -56,7 +142,7 @@ div.cell.mode {
 div.cell.formula:hover,
 div.cell.note:hover,
 div.cell.octave:hover {
-  background-color: #A9B7C0;
+  background-color: #a9b7c0;
   color: white;
   opacity: 0.75; }
 
@@ -66,7 +152,7 @@ div.matrix div.cell-selected {
 
 div.matrix div.cell-selected:hover {
   background-color: #658080;
-  opacity: 1.0;
+  opacity: 1;
   color: white; }
 
 div.cell.result {
@@ -85,8 +171,8 @@ select {
   font-size: 15px;
   line-height: 1;
   border: 0;
-  border-radius: 5px;
-  height: 34px;
+  border-radius: 1px;
+  height: 28px;
   background: url(../img/down-arrow.png) no-repeat right #ddd;
   -webkit-appearance: none;
   padding: 6px 10px;
@@ -130,9 +216,38 @@ select-cell-caption text {
   width: 960px;
   margin: 15px auto 10px auto; }
 
+@keyframes glowing {
+  0% {
+    background-color: #658080; }
+  50% {
+    background-color: #7da0a0;
+    box-shadow: 0 0 7px grey; }
+  100% {
+    background-color: #658080; } }
+
 #audio-banner {
   max-width: 860px;
-  margin: auto;
-  padding-top: 10px; }
+  margin: 20px 35px 0 50px;
+  padding: 25px 0 0 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  Height: 70px; }
   #audio-banner button {
-    background-color: white; }
+    margin-left: 35px;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-size: 15px;
+    background-color: #658080;
+    outline: none;
+    animation: glowing 1500ms infinite; }
+
+span.bpm {
+  width: 180px;
+  font-family: 'Teko', sans-serif;
+  float: left;
+  font-size: 65px;
+  font-weight: 600 !important;
+  margin: -25px 0 -10px 0;
+  text-align: right; }

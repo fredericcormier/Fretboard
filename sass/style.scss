@@ -1,13 +1,15 @@
+@import '_inputrange.scss';
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
 $devilColor: #666;
 $bgColor: #ffffff;
-$GREYBLUE: #A9B7C0;
-$MINTY: #C7D8C6;
-$LIGHT: #EFD9C1;
-$POWDER: #CCCBC6;
+$GREYBLUE: #a9b7c0;
+$MINTY: #c7d8c6;
+$LIGHT: #efd9c1;
+$POWDER: #cccbc6;
 $selectedCellColor: #658080;
 
-
-$selectedCellColorFade: #718d8d;
+$selectedCellColorFade: #7da0a0;
 
 body {
     line-height: 1.5;
@@ -23,15 +25,12 @@ a:active {
     text-decoration: none;
 }
 
-
 a:hover {
     text-decoration: underline;
-
 }
 
 /*Matrix*/
 div.centered-wrapper {
-
     text-align: center;
     background-color: $bgColor;
     width: 960px;
@@ -84,7 +83,6 @@ div.cell.octave:hover {
     background-color: $GREYBLUE;
     color: white;
     opacity: 0.75;
-
 }
 
 div.matrix div.cell-selected {
@@ -94,10 +92,9 @@ div.matrix div.cell-selected {
 
 div.matrix div.cell-selected:hover {
     background-color: $selectedCellColor;
-    opacity: 1.0;
+    opacity: 1;
     color: white;
 }
-
 
 div.cell.result {
     background-color: $selectedCellColor;
@@ -109,7 +106,6 @@ div.cell.result {
 .select-wrapper {
     width: 100%;
     margin: 0 auto;
-
 }
 
 select {
@@ -118,8 +114,8 @@ select {
     font-size: 15px;
     line-height: 1;
     border: 0;
-    border-radius: 5px;
-    height: 34px;
+    border-radius: 1px;
+    height: 28px;
     // background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
     background: url(../img/down-arrow.png) no-repeat right #ddd;
 
@@ -129,25 +125,6 @@ select {
     background-color: $selectedCellColor;
     background-position-x: 180px;
 }
-
-// select {
-//     -webkit-appearance: none;
-//     height: 28px;
-//     width: 200px;
-//     font-size: 15px;
-//     color: white;
-//     outline: none;
-//     margin-right: 20px;
-//     margin-left: 5px;
-//     background-color: $selectedCellColor;
-//     height: 38px;
-//     padding: 6px 10px;
-
-//     box-shadow: none;
-//     box-sizing: border-box;
-//     background: url(../img/down-arrow.png) no-repeat 180px 18px
-// }
-
 
 
 select:hover {
@@ -165,7 +142,6 @@ select:focus {
     // outline: none;
 }
 
-
 div.select-row {
     padding-left: 0px;
     width: 850px;
@@ -173,11 +149,9 @@ div.select-row {
 }
 
 div.select-cell {
-
     // float: left;
     // margin-top: 20px;
 }
-
 
 div.select-cell-caption {
     // background-color: red;
@@ -213,14 +187,51 @@ select-cell-caption text {
     margin: 15px auto 10px auto;
 }
 
+@keyframes glowing {
+    0% {
+        background-color: $selectedCellColor;
+    }
+
+    50% {
+        background-color: $selectedCellColorFade;
+        box-shadow: 0 0 7px grey;
+    }
+
+    100% {
+        background-color: $selectedCellColor;
+    }
+}
+
 #audio-banner {
     max-width: 860px;
-    margin: auto;
-    // background-color: $selectedCellColor;
-    padding-top: 10px;
+    margin: 20px 35px 0 50px;
+    padding: 25px 0 0 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    Height: 70px;
 
     button {
-        // float: left;
-        background-color: white;
+        margin-left: 35px;
+        border-radius: 5px;
+        width: 150px;
+        height: 50px;
+        color: white;
+        font-size: 15px;
+        background-color: $selectedCellColor;
+        outline: none;
+
+        animation: glowing 1500ms infinite;
+
+        // float: right;
     }
+}
+
+span.bpm {
+    width: 180px;
+    font-family: 'Teko', sans-serif;
+    float: left;
+    font-size: 65px;
+    font-weight: 600 !important;
+    margin: -25px 0 -10px 0;
+    text-align: right;
 }

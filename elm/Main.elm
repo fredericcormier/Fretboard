@@ -648,13 +648,13 @@ audioBannerDiv model =
     div
         [ id "audio-banner"
         ]
-        [ if model.audioPlaying == False then
+        [ span [ class "bpm" ] [ text (String.fromInt model.bpm ++ nbsp ++ "BPM") ]
+        , input [ onInput BPMChanged, id "slider", type_ "range", Html.Attributes.min "10", Html.Attributes.max "200" ] []
+        , if model.audioPlaying == False then
             button [ onClick ToggleAudio ] [ text "Play" ]
 
           else
-            button [ onClick ToggleAudio ] [ text "Stop" ]
-        , input [ onInput BPMChanged, id "bpm", type_ "range", Html.Attributes.min "10", Html.Attributes.max "200" ] []
-        , span [] [ text (String.fromInt model.bpm) ]
+            button [ onClick ToggleAudio, id "play" ] [ text "Stop" ]
         ]
 
 
@@ -698,7 +698,7 @@ view model =
         , octaveMatrixDiv model
         , formulaMatrixDiv model
         , resultMatrixDiv model
-        , fretboardSelectionDiv model
         , audioBannerDiv model
+        , fretboardSelectionDiv model
         , fretboardDiv model
         ]
