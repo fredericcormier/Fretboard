@@ -103,43 +103,34 @@ div.cell.result {
 }
 
 /*End Matrix*/
+// ------------------------Selects
 .select-wrapper {
     width: 100%;
     margin: 0 auto;
 }
 
 select {
-    width: 200px;
+    width: 165px;
     padding: 5px;
     font-size: 15px;
     line-height: 1;
     border: 0;
     border-radius: 1px;
     height: 28px;
-    // background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
-    background: url(../img/down-arrow.png) no-repeat right #ddd;
+    background: url(../img/down-arrow.png) no-repeat #ddd;
+    background-position-x: 145px;
+    background-position-Y: 12px;
+    background-color: $selectedCellColor;
 
     -webkit-appearance: none;
     padding: 6px 10px;
     color: white;
-    background-color: $selectedCellColor;
-    background-position-x: 180px;
 }
 
 
-select:hover {
-    // background-color: $GREYBLUE;
-    // border: 5px solid $selectedCellColor;
-    // border-color: rgb(104, 5, 5);
-}
 
 select:focus {
     border-color: white;
-
-    // box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
-    // box-shadow: 0 0 0 3px -moz-mac-focusring;
-    // color: #222;
-    // outline: none;
 }
 
 div.select-row {
@@ -148,15 +139,9 @@ div.select-row {
     display: inline-block;
 }
 
-div.select-cell {
-    // float: left;
-    // margin-top: 20px;
-}
 
 div.select-cell-caption {
-    // background-color: red;
-    // text-indent: 50px;
-    width: 25%;
+    width: 20%;
     text-align: left;
     float: left;
     padding-top: 1px;
@@ -167,6 +152,7 @@ select-cell-caption text {
     text-indent: 50px;
 }
 
+// --------------------------End Select
 .footer {
     min-width: 850px;
     background-color: white;
@@ -232,6 +218,6 @@ span.bpm {
     float: left;
     font-size: 65px;
     font-weight: 600 !important;
-    margin: -25px 0 -10px 0;
+    margin: -20px 0 -10px 0;
     text-align: right;
 }

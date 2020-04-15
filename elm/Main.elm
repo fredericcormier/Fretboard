@@ -119,10 +119,7 @@ port notesChanged : List String -> Cmd msg
 
 arpeggioPatterns : List String
 arpeggioPatterns =
-    [ "Up"
-    , "Down"
-    , "Up And Down"
-    , "Next Three Up"
+    [ "Next Three Up"
     , "Next Three Down"
     , "Next Three Up And Down"
     , "Thirds Up"
@@ -130,6 +127,14 @@ arpeggioPatterns =
     , "Thirds Up And Down"
     , "Even"
     , "Odd"
+    ]
+
+
+directions : List String
+directions =
+    [ "Up"
+    , "Down"
+    , "Up And Down"
     ]
 
 
@@ -142,6 +147,7 @@ type alias Model =
     , range : OctaveRange
     , audioPlaying : Bool
     , arpeggioPatterns : String
+    , direction : String
     , bpm : Int
     , rootNoteDouble : Bool
     }
@@ -159,6 +165,7 @@ init _ =
             , range = 3
             , audioPlaying = False
             , arpeggioPatterns = "Up"
+            , direction = "Up"
             , bpm = 120
             , rootNoteDouble = False
             }
@@ -183,6 +190,7 @@ type Msg
     | OctaveRangeChanged String
     | ToggleAudio
     | ArpeggioPatternChanged String
+    | DirectionChanged String
     | BPMChanged String
     | DoubleRootChanged String
 
@@ -285,6 +293,15 @@ update msg model =
             let
                 newModel =
                     { model | arpeggioPatterns = p }
+            in
+            ( newModel
+            , notesChanged (notesForAudio newModel)
+            )
+
+        DirectionChanged d ->
+            let
+                newModel =
+                    { model | direction = d }
             in
             ( newModel
             , notesChanged (notesForAudio newModel)
@@ -623,6 +640,14 @@ arpeggioPatternsSelect =
         ]
 
 
+directionSelect : Html Msg
+directionSelect =
+    div [ class "select-cell" ]
+        [ select [ onInput DirectionChanged, name "Direction", class "soflow" ]
+            (directions |> List.map stringToOption)
+        ]
+
+
 doubleRootSelect : Model -> Html Msg
 doubleRootSelect model =
     div [ class "select-cell" ]
@@ -638,6 +663,7 @@ fretboardSelectionDiv model =
             [ div [ class "select-cell-caption" ] [ text (nbsp ++ nbsp ++ "Tuning :"), instrumentSelect ]
             , div [ class "select-cell-caption" ] [ text (nbsp ++ nbsp ++ "Range :"), octaveRangeSelect model ]
             , div [ class "select-cell-caption" ] [ text (nbsp ++ nbsp ++ "Pattern :"), arpeggioPatternsSelect ]
+            , div [ class "select-cell-caption" ] [ text (nbsp ++ nbsp ++ "Direction :"), directionSelect ]
             , div [ class "select-cell-caption" ] [ text (nbsp ++ nbsp ++ "Double Root :"), doubleRootSelect model ]
             ]
         ]
