@@ -1,8 +1,6 @@
 port module Main exposing
     ( Model
     , Msg(..)
-    , arpeggioPatterns
-    , arpeggioPatternsSelect
     , audioBannerDiv
     , audioStart
     , audioStop
@@ -30,6 +28,8 @@ port module Main exposing
     , octaveRangeSelect
     , resultMatrixDiv
     , selectionH1
+    , sequences
+    , sequencesSelect
     , stringToOption
     , subscriptions
     , update
@@ -117,8 +117,8 @@ port notesChanged : List String -> Cmd msg
 -- MODEL
 
 
-arpeggioPatterns : List String
-arpeggioPatterns =
+sequences : List String
+sequences =
     [ "Straight"
     , "1231"
     , "13"
@@ -143,7 +143,7 @@ type alias Model =
     , tuning : TuningName
     , range : OctaveRange
     , audioPlaying : Bool
-    , arpeggioPatterns : String
+    , sequences : String
     , direction : String
     , bpm : Int
     , rootNoteDouble : Bool
@@ -161,7 +161,7 @@ init _ =
             , tuning = "Guitar"
             , range = 3
             , audioPlaying = False
-            , arpeggioPatterns = "Straight"
+            , sequences = "Straight"
             , direction = "Up"
             , bpm = 120
             , rootNoteDouble = False
@@ -186,7 +186,7 @@ type Msg
     | TuningChanged String
     | OctaveRangeChanged String
     | ToggleAudio
-    | ArpeggioPatternChanged String
+    | SequenceChanged String
     | DirectionChanged String
     | BPMChanged String
     | DoubleRootChanged String
@@ -286,10 +286,10 @@ update msg model =
                 , audioStart "nevermind"
                 )
 
-        ArpeggioPatternChanged p ->
+        SequenceChanged p ->
             let
                 newModel =
-                    { model | arpeggioPatterns = p }
+                    { model | sequences = p }
             in
             ( newModel
             , notesChanged (notesForAudio newModel)
@@ -526,7 +526,7 @@ notesForAudio model =
         notes =
             notesForModelState model
     in
-    case model.arpeggioPatterns of
+    case model.sequences of
         "Straight" ->
             case model.direction of
                 "Up" ->
@@ -665,11 +665,11 @@ octaveRangeSelect model =
         ]
 
 
-arpeggioPatternsSelect : Html Msg
-arpeggioPatternsSelect =
+sequencesSelect : Html Msg
+sequencesSelect =
     div [ class "select-cell" ]
-        [ select [ onInput ArpeggioPatternChanged, name "Pattern", class "soflow" ]
-            (arpeggioPatterns |> List.map stringToOption)
+        [ select [ onInput SequenceChanged, name "Sequence", class "soflow" ]
+            (sequences |> List.map stringToOption)
         ]
 
 
@@ -695,7 +695,7 @@ fretboardSelectionDiv model =
         [ div [ class "select-row" ]
             [ div [ class "select-cell-caption" ] [ text (nbsp ++ nbsp ++ "Tuning :"), instrumentSelect ]
             , div [ class "select-cell-caption" ] [ text (nbsp ++ nbsp ++ "Range :"), octaveRangeSelect model ]
-            , div [ class "select-cell-caption" ] [ text (nbsp ++ nbsp ++ "Pattern :"), arpeggioPatternsSelect ]
+            , div [ class "select-cell-caption" ] [ text (nbsp ++ nbsp ++ "Sequence :"), sequencesSelect ]
             , div [ class "select-cell-caption" ] [ text (nbsp ++ nbsp ++ "Direction :"), directionSelect ]
             , div [ class "select-cell-caption" ] [ text (nbsp ++ nbsp ++ "Double Root :"), doubleRootSelect model ]
             ]
