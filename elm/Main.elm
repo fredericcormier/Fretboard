@@ -119,14 +119,11 @@ port notesChanged : List String -> Cmd msg
 
 arpeggioPatterns : List String
 arpeggioPatterns =
-    [ "Next Three Up"
-    , "Next Three Down"
-    , "Next Three Up And Down"
-    , "Thirds Up"
-    , "Thirds Down"
-    , "Thirds Up And Down"
-    , "Even"
-    , "Odd"
+    [ "Straight"
+    , "1231"
+    , "13"
+    , "124"
+    , "135"
     ]
 
 
@@ -164,7 +161,7 @@ init _ =
             , tuning = "Guitar"
             , range = 3
             , audioPlaying = False
-            , arpeggioPatterns = "Up"
+            , arpeggioPatterns = "Straight"
             , direction = "Up"
             , bpm = 120
             , rootNoteDouble = False
@@ -530,39 +527,75 @@ notesForAudio model =
             notesForModelState model
     in
     case model.arpeggioPatterns of
-        "Up" ->
-            notes
+        "Straight" ->
+            case model.direction of
+                "Up" ->
+                    notes
 
-        "Down" ->
-            List.reverse notes
+                "Down" ->
+                    List.reverse notes
 
-        "Up And Down" ->
-            -- List.reverse notes |> List.append notes
-            notes ++ List.reverse notes
+                "Up And Down" ->
+                    notes ++ List.reverse notes
 
-        "Next Three Up" ->
-            nextThreeUp notes
+                _ ->
+                    notes
 
-        "Next Three Down" ->
-            List.reverse (nextThreeUp notes)
+        "1231" ->
+            case model.direction of
+                "Up" ->
+                    nextThreeUp notes
 
-        "Next Three Up And Down" ->
-            nextThreeUp notes ++ List.reverse (nextThreeUp notes)
+                "Down" ->
+                    List.reverse (nextThreeUp notes)
 
-        "Thirds Up" ->
-            thirdsUp notes
+                "Up And Down" ->
+                    nextThreeUp notes ++ List.reverse (nextThreeUp notes)
 
-        "Thirds Down" ->
-            List.reverse (thirdsUp notes)
+                _ ->
+                    nextThreeUp notes
 
-        "Thirds Up And Down" ->
-            thirdsUp notes ++ List.reverse (thirdsUp notes)
+        "13" ->
+            case model.direction of
+                "Up" ->
+                    thirdsUp notes
 
-        "Even" ->
-            even notes
+                "Down" ->
+                    List.reverse (thirdsUp notes)
 
-        "Odd" ->
-            odd notes
+                "Up And Down" ->
+                    thirdsUp notes ++ List.reverse (thirdsUp notes)
+
+                _ ->
+                    thirdsUp notes
+
+        "124" ->
+            case model.direction of
+                "Up" ->
+                    even notes
+
+                "Down" ->
+                    List.reverse (even notes)
+
+                "Up And Down" ->
+                    even notes ++ List.reverse (even notes)
+
+                _ ->
+                    even notes
+
+        "135" ->
+            case model.direction of
+                "Up" ->
+                    odd notes
+
+                "Down" ->
+                    List.reverse (odd notes)
+
+                "Up And Down" ->
+                    odd notes ++ List.reverse (odd notes)
+
+                _ ->
+                    odd notes
 
         _ ->
             notes
