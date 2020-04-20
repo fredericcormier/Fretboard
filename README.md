@@ -7,7 +7,7 @@
 
 
 
-![screenshot](http://www.i-mo.eu/zings/fretboardapp.png)
+![screenshot](http://www.hbsrecording.com/zings/fretboardapp.png)
 
 ---
 ### Compile:
