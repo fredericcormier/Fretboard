@@ -12,6 +12,7 @@ module Notes exposing
     , noteNames
     , scale
     , scaleMode
+    , sequence
     )
 
 import Array
@@ -79,39 +80,8 @@ chordMode =
     "Chord"
 
 
-{-| Looks for a Tuple in the List "list" whose first value is "name" and if found,
-returns the corresponding second value"
 
-    formula chordFormulaPool major
-
--}
-formula : List Formula -> FormulaName -> Maybe (List Int)
-formula list name =
-    case list of
-        [] ->
-            Nothing
-
-        ( x, f ) :: xs ->
-            if x == name then
-                Just f
-
-            else
-                formula xs name
-
-
-{-|
-
-    All the names of a collection of formulas
-    ie: All Chord names or all Scale names
-
--}
-formulaNames : List Formula -> List FormulaName
-formulaNames l =
-    List.map (\x -> Tuple.first x) l
-
-
-
--- returns the index (position) of an element in a list
+-----------------------Helpers----------------------
 
 
 indexInList : List a -> a -> Int -> Maybe Int
@@ -149,11 +119,95 @@ rotateR times list =
                     rotateR (times - 1) (List.append xs [ x ])
 
 
+listOfIntFromString : String -> List Int
+listOfIntFromString s =
+    let
+        -- Convert a 'String' in a 'List Maybe Int' through a 'List Char'
+        sequenceIntValue =
+            List.map (\x -> String.toInt (String.fromChar x)) (String.toList s)
+    in
+    -- The following filters out the "Nothing" s ( List Maybe Int -> List Int)
+    List.filterMap identity sequenceIntValue
 
+
+
+-- This will expand a List like this [ 1,3,4,7] to one like this [ 1,0,3,4,0,0,7]
+-- Thanks to https://johncrane.gitbooks.io/ninety-nine-elm-problems/content/s/s15.html
+
+
+repeatElements : Int -> List a -> List a
+repeatElements n list =
+    case list of
+        [] ->
+            []
+
+        x :: xs ->
+            List.repeat n x ++ repeatElements n xs
+
+
+expand : List Int -> List Int
+expand l =
+    case l of
+        [] ->
+            []
+
+        x1 :: x2 :: xs ->
+            let
+                -- Problem with patterns like  [1432] cause descending numbers
+                distance =
+                    x2 - x1 - 1
+            in
+            if distance == 0 then
+                x1 :: expand (x2 :: xs)
+
+            else
+                x1 :: repeatElements distance [ 0 ] ++ expand (x2 :: xs)
+
+        x :: [] ->
+            [ x ]
+
+
+
+-----------------------End Helpers------------------------------
 {-
    Returns the midi note number in the range of 0..127
    C-1 to G9 or Nothing
 -}
+
+
+{-| Looks for a Tuple in the List "list" whose first value is "name" and if found,
+returns the corresponding second value"
+
+    formula chordFormulaPool major
+
+-}
+formula : List Formula -> FormulaName -> Maybe (List Int)
+formula list name =
+    case list of
+        [] ->
+            Nothing
+
+        ( x, f ) :: xs ->
+            if x == name then
+                Just f
+
+            else
+                formula xs name
+
+
+{-|
+
+    All the names of a collection of formulas
+    ie: All Chord names or all Scale names
+
+-}
+formulaNames : List Formula -> List FormulaName
+formulaNames l =
+    List.map (\x -> Tuple.first x) l
+
+
+
+-- returns the index (position) of an element in a list
 
 
 noteAndOctaveToMidiNoteNumber : Note -> Octave -> Maybe Int
@@ -272,3 +326,30 @@ chord root octave chordName octaveRange dedup inversion =
 scale : Note -> Octave -> FormulaName -> OctaveRange -> Bool -> NoteCollection
 scale root octave scaleName octaveRange dedup =
     scaleCollection root octave scaleName octaveRange dedup
+
+
+getNote : String -> Int -> Maybe String
+getNote s i =
+    if i /= 0 then
+        Just s
+
+    else
+        Nothing
+
+
+sequence : List String -> String -> List String
+sequence notes pattern =
+    let
+        expandedPattern =
+            listOfIntFromString pattern |> expand
+
+        -- _ =
+        --     Debug.log "In Sequence with ext pattern" expandedPattern
+    in
+    case notes of
+        x :: xs ->
+            List.filterMap identity (List.map2 getNote (x :: xs) expandedPattern)
+                ++ sequence xs pattern
+
+        _ ->
+            []

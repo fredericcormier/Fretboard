@@ -75,6 +75,7 @@ import Notes
         , noteNames
         , scale
         , scaleMode
+        , sequence
         )
 import Tuning
     exposing
@@ -119,9 +120,10 @@ port notesChanged : List String -> Cmd msg
 
 sequences : List String
 sequences =
-    [ "Straight"
-    , "1231"
+    [ "1"
+    , "1234"
     , "13"
+    , "1432"
     , "124"
     , "135"
     ]
@@ -161,7 +163,7 @@ init _ =
             , tuning = "Guitar"
             , range = 3
             , audioPlaying = False
-            , sequences = "Straight"
+            , sequences = "1"
             , direction = "Up"
             , bpm = 120
             , rootNoteDouble = False
@@ -468,7 +470,7 @@ formulaMatrixDiv model =
             (matrixOfStrings "Formula" (formulaNames scaleFormulaPool) model.formulaName)
 
 
-nextThreeUp : List int -> List int
+nextThreeUp : List String -> List String
 nextThreeUp l =
     case l of
         [] ->
@@ -481,7 +483,7 @@ nextThreeUp l =
             []
 
 
-thirdsUp : List int -> List int
+thirdsUp : List String -> List String
 thirdsUp l =
     case l of
         [] ->
@@ -494,7 +496,7 @@ thirdsUp l =
             []
 
 
-even : List int -> List int
+even : List String -> List String
 even l =
     case l of
         [] ->
@@ -507,7 +509,7 @@ even l =
             []
 
 
-odd : List int -> List int
+odd : List String -> List String
 odd l =
     case l of
         [] ->
@@ -520,91 +522,38 @@ odd l =
             []
 
 
+
+-- Thanks to https://johncrane.gitbooks.io/ninety-nine-elm-problems/content/s/s15.html
+
+
+repeatElements : Int -> List a -> List a
+repeatElements n list =
+    case list of
+        [] ->
+            []
+
+        x :: xs ->
+            List.repeat n x ++ repeatElements n xs
+
+
 notesForAudio : Model -> List String
 notesForAudio model =
     let
         notes =
             notesForModelState model
     in
-    case model.sequences of
-        "Straight" ->
-            case model.direction of
-                "Up" ->
-                    notes
+    case model.direction of
+        "Up" ->
+            sequence notes model.sequences
 
-                "Down" ->
-                    List.reverse notes
+        "Down" ->
+            List.reverse (sequence notes model.sequences)
 
-                "Up And Down" ->
-                    notes ++ List.reverse notes
-
-                _ ->
-                    notes
-
-        "1231" ->
-            case model.direction of
-                "Up" ->
-                    nextThreeUp notes
-
-                "Down" ->
-                    List.reverse (nextThreeUp notes)
-
-                "Up And Down" ->
-                    nextThreeUp notes ++ List.reverse (nextThreeUp notes)
-
-                _ ->
-                    nextThreeUp notes
-
-        "13" ->
-            case model.direction of
-                "Up" ->
-                    thirdsUp notes
-
-                "Down" ->
-                    List.reverse (thirdsUp notes)
-
-                "Up And Down" ->
-                    thirdsUp notes ++ List.reverse (thirdsUp notes)
-
-                _ ->
-                    thirdsUp notes
-
-        "124" ->
-            case model.direction of
-                "Up" ->
-                    even notes
-
-                "Down" ->
-                    List.reverse (even notes)
-
-                "Up And Down" ->
-                    even notes ++ List.reverse (even notes)
-
-                _ ->
-                    even notes
-
-        "135" ->
-            case model.direction of
-                "Up" ->
-                    odd notes
-
-                "Down" ->
-                    List.reverse (odd notes)
-
-                "Up And Down" ->
-                    odd notes ++ List.reverse (odd notes)
-
-                _ ->
-                    odd notes
+        "Up And Down" ->
+            sequence notes model.sequences ++ List.reverse (sequence notes model.sequences)
 
         _ ->
-            notes
-
-
-
-{-
-   retun the note collection according to the model state
--}
+            sequence notes model.sequences
 
 
 notesForModelState : Model -> List String
