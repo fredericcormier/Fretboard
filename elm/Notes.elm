@@ -145,8 +145,8 @@ repeatElements n list =
             List.repeat n x ++ repeatElements n xs
 
 
-expand : List Int -> List Int
-expand l =
+expandSequence : List Int -> List Int
+expandSequence l =
     case l of
         [] ->
             []
@@ -158,10 +158,15 @@ expand l =
                     x2 - x1 - 1
             in
             if distance == 0 then
-                x1 :: expand (x2 :: xs)
+                x1 :: expandSequence (x2 :: xs)
+                -- ascending notes
+
+            else if distance > 0 then
+                x1 :: repeatElements distance [ 0 ] ++ expandSequence (x2 :: xs)
+                -- Descending notes
 
             else
-                x1 :: repeatElements distance [ 0 ] ++ expand (x2 :: xs)
+                x1 :: repeatElements distance [ 0 ] ++ expandSequence (x2 :: xs)
 
         x :: [] ->
             [ x ]
@@ -341,7 +346,7 @@ sequence : List String -> String -> List String
 sequence notes pattern =
     let
         expandedPattern =
-            listOfIntFromString pattern |> expand
+            listOfIntFromString pattern |> expandSequence
 
         -- _ =
         --     Debug.log "In Sequence with ext pattern" expandedPattern
