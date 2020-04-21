@@ -322,6 +322,54 @@ update msg model =
 
 
 
+-----------------------Audio--------------------------
+
+
+notesForAudio : Model -> List String
+notesForAudio model =
+    let
+        notes =
+            notesForModelState model
+    in
+    case model.direction of
+        "Up" ->
+            sequence notes model.sequences
+
+        "Down" ->
+            List.reverse (sequence notes model.sequences)
+
+        "Up And Down" ->
+            sequence notes model.sequences ++ List.reverse (sequence notes model.sequences)
+
+        _ ->
+            sequence notes model.sequences
+
+
+notesForModelState : Model -> List String
+notesForModelState model =
+    if model.mode == chordMode then
+        chord model.note
+            model.octave
+            model.formulaName
+            model.range
+            (not model.rootNoteDouble)
+            0
+            |> List.take 36
+            |> List.map (\i -> midiNoteNumberToString i)
+
+    else
+        scale model.note
+            model.octave
+            model.formulaName
+            model.range
+            (not model.rootNoteDouble)
+            |> List.take 36
+            |> List.map (\i -> midiNoteNumberToString i)
+
+
+
+----------------------End Audio ---------------------
+--
 -- Html Select Helpers
 
 
@@ -371,6 +419,8 @@ boolToOption dedup choice =
 
 
 
+-----------------End HTML Helpers--------------------
+--
 -- Matrices of Div's
 
 
@@ -393,7 +443,55 @@ matrixOfStrings matrixName theList theSelectedItem =
 
 
 
--- VIEWS
+-- End Matrices od Divs
+--
+-- -------------------------------Select
+
+
+instrumentSelect : Html Msg
+instrumentSelect =
+    div [ class "select-cell" ]
+        [ select [ onInput TuningChanged, name "Intrument", class "soflow" ]
+            (tuningNames |> List.map stringToOption)
+        ]
+
+
+octaveRangeSelect : Model -> Html Msg
+octaveRangeSelect model =
+    div [ class "select-cell" ]
+        [ select [ onInput OctaveRangeChanged, name "Range", class "soflow" ]
+            -- pass the model range as first argument so the menu can display '3' on start up
+            (List.range 1 6 |> List.map (intToOption model.range))
+        ]
+
+
+sequencesSelect : Html Msg
+sequencesSelect =
+    div [ class "select-cell" ]
+        [ select [ onInput SequenceChanged, name "Sequence", class "soflow" ]
+            (sequences |> List.map stringToOption)
+        ]
+
+
+directionSelect : Html Msg
+directionSelect =
+    div [ class "select-cell" ]
+        [ select [ onInput DirectionChanged, name "Direction", class "soflow" ]
+            (directions |> List.map stringToOption)
+        ]
+
+
+doubleRootSelect : Model -> Html Msg
+doubleRootSelect model =
+    div [ class "select-cell" ]
+        [ select [ onInput DoubleRootChanged, name "DoubleRoot", class "soflow" ]
+            (doubleRootChoices |> List.map (boolToOption model.rootNoteDouble))
+        ]
+
+
+
+-- End HTML Select
+-------------------------------- VIEWS
 
 
 modeMatrixDiv : Model -> Html Msg
@@ -470,48 +568,6 @@ formulaMatrixDiv model =
             (matrixOfStrings "Formula" (formulaNames scaleFormulaPool) model.formulaName)
 
 
-notesForAudio : Model -> List String
-notesForAudio model =
-    let
-        notes =
-            notesForModelState model
-    in
-    case model.direction of
-        "Up" ->
-            sequence notes model.sequences
-
-        "Down" ->
-            List.reverse (sequence notes model.sequences)
-
-        "Up And Down" ->
-            sequence notes model.sequences ++ List.reverse (sequence notes model.sequences)
-
-        _ ->
-            sequence notes model.sequences
-
-
-notesForModelState : Model -> List String
-notesForModelState model =
-    if model.mode == chordMode then
-        chord model.note
-            model.octave
-            model.formulaName
-            model.range
-            (not model.rootNoteDouble)
-            0
-            |> List.take 36
-            |> List.map (\i -> midiNoteNumberToString i)
-
-    else
-        scale model.note
-            model.octave
-            model.formulaName
-            model.range
-            (not model.rootNoteDouble)
-            |> List.take 36
-            |> List.map (\i -> midiNoteNumberToString i)
-
-
 resultMatrixDiv : Model -> Html Msg
 resultMatrixDiv model =
     let
@@ -529,47 +585,6 @@ resultMatrixDiv model =
             (notesForModelState model)
             selectedCellNONE
         )
-
-
-instrumentSelect : Html Msg
-instrumentSelect =
-    div [ class "select-cell" ]
-        [ select [ onInput TuningChanged, name "Intrument", class "soflow" ]
-            (tuningNames |> List.map stringToOption)
-        ]
-
-
-octaveRangeSelect : Model -> Html Msg
-octaveRangeSelect model =
-    div [ class "select-cell" ]
-        [ select [ onInput OctaveRangeChanged, name "Range", class "soflow" ]
-            -- pass the model range as first argument so the menu can display '3' on start up
-            (List.range 1 6 |> List.map (intToOption model.range))
-        ]
-
-
-sequencesSelect : Html Msg
-sequencesSelect =
-    div [ class "select-cell" ]
-        [ select [ onInput SequenceChanged, name "Sequence", class "soflow" ]
-            (sequences |> List.map stringToOption)
-        ]
-
-
-directionSelect : Html Msg
-directionSelect =
-    div [ class "select-cell" ]
-        [ select [ onInput DirectionChanged, name "Direction", class "soflow" ]
-            (directions |> List.map stringToOption)
-        ]
-
-
-doubleRootSelect : Model -> Html Msg
-doubleRootSelect model =
-    div [ class "select-cell" ]
-        [ select [ onInput DoubleRootChanged, name "DoubleRoot", class "soflow" ]
-            (doubleRootChoices |> List.map (boolToOption model.rootNoteDouble))
-        ]
 
 
 fretboardSelectionDiv : Model -> Html Msg

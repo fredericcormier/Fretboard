@@ -131,48 +131,6 @@ listOfIntFromString s =
 
 
 
--- This will expand a List like this [ 1,3,4,7] to one like this [ 1,0,3,4,0,0,7]
--- Thanks to https://johncrane.gitbooks.io/ninety-nine-elm-problems/content/s/s15.html
-
-
-repeatElements : Int -> List a -> List a
-repeatElements n list =
-    case list of
-        [] ->
-            []
-
-        x :: xs ->
-            List.repeat n x ++ repeatElements n xs
-
-
-expandSequence : List Int -> List Int
-expandSequence l =
-    case l of
-        [] ->
-            []
-
-        x1 :: x2 :: xs ->
-            let
-                -- Problem with patterns like  [1432] cause descending numbers
-                distance =
-                    x2 - x1 - 1
-            in
-            if distance == 0 then
-                x1 :: expandSequence (x2 :: xs)
-                -- ascending notes
-
-            else if distance > 0 then
-                x1 :: repeatElements distance [ 0 ] ++ expandSequence (x2 :: xs)
-                -- Descending notes
-
-            else
-                x1 :: repeatElements distance [ 0 ] ++ expandSequence (x2 :: xs)
-
-        x :: [] ->
-            [ x ]
-
-
-
 -----------------------End Helpers------------------------------
 {-
    Returns the midi note number in the range of 0..127
@@ -333,28 +291,41 @@ scale root octave scaleName octaveRange dedup =
     scaleCollection root octave scaleName octaveRange dedup
 
 
-getNote : String -> Int -> Maybe String
-getNote s i =
-    if i /= 0 then
-        Just s
+discreteSequence : Int -> List Int -> Array String -> List String
+discreteSequence index pattern array =
+    let
+        l =
+            List.map (\x -> Array.get (x + index) array) pattern
+    in
+    -- Get rid of "Nothing" s
+    List.filterMap identity l
 
-    else
-        Nothing
+
+
+-- return the sequence where the pattern was applied to the scale
+{- As we want to use ascending patterns as well as descending pattern like
+   [1,2,3,4] or [1,5,3,2] using recursive List.map functions is not an option
+   since it's very hard to scan the list backwards, thus the use of and array
+-}
 
 
 sequence : List String -> String -> List String
 sequence notes pattern =
     let
-        expandedPattern =
-            listOfIntFromString pattern |> expandSequence
-
-        -- _ =
-        --     Debug.log "In Sequence with ext pattern" expandedPattern
+        noteCollectionArray =
+            Array.fromList notes
     in
+    -- Walk the list
     case notes of
         x :: xs ->
-            List.filterMap identity (List.map2 getNote (x :: xs) expandedPattern)
-                ++ sequence xs pattern
+            let
+                i =
+                    Maybe.withDefault 0 (indexInList notes x 0)
+
+                p =
+                    listOfIntFromString pattern
+            in
+            discreteSequence (i - 1) p noteCollectionArray ++ sequence xs pattern
 
         _ ->
             []
