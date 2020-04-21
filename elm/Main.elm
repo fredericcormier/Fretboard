@@ -165,7 +165,7 @@ init _ =
             , audioPlaying = False
             , sequences = "1"
             , direction = "Up"
-            , bpm = 120
+            , bpm = 90
             , rootNoteDouble = False
             }
     in
